@@ -150,14 +150,15 @@
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "semantic.content.subtle",
           "semantic.outline.content-disabled",
           "semantic.ghost.content-disabled",
-          "semantic.link.content-disabled"
+          "semantic.link.content-disabled",
+          "semantic.content.disabled"
         ],
         "figma": []
       }
@@ -178,21 +179,18 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 4
+            "count": 3
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 4
+            "count": 2
           }
         ],
         "tokens": [
           "semantic.outline.border-default",
-          "semantic.content.disabled",
           "semantic.border.strong",
           "semantic.border.control-default",
           "semantic.outline.border-default",
-          "semantic.content.subtle",
-          "semantic.content.disabled",
           "semantic.border.control-default"
         ],
         "figma": []
@@ -214,7 +212,7 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 4
+            "count": 5
           },
           {
             "file": "css/tokens/generated/theme-light.css",
@@ -226,7 +224,8 @@
           "semantic.ghost.content-disabled",
           "semantic.link.content-disabled",
           "semantic.surface.elevated",
-          "semantic.content.default",
+          "semantic.content.disabled",
+          "semantic.content.subtle",
           "semantic.border.strong"
         ],
         "figma": []
@@ -252,7 +251,7 @@
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
@@ -260,6 +259,7 @@
           "semantic.border.default",
           "semantic.outline.content-default",
           "semantic.outline.border-hover",
+          "semantic.content.default",
           "semantic.content.hover"
         ],
         "figma": []
@@ -871,8 +871,15 @@
       "contexto": "Foundation: nunca consumir direto em componente (ADR-013). Use via Semantic alias apropriado (`brand.*`, `feedback.error.*`, `content.*`, `background.*`).",
       "decisao": "Step da escala 50–950 padronizada. Calibrado pra contraste WCAG: 50–200 = backgrounds claros; 300–500 = states de UI; 600–800 = foregrounds e fills sólidos; 900–950 = dark surfaces.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.feedback.error.content.strong"
+        ],
         "figma": []
       }
     },
@@ -1004,11 +1011,12 @@
         "css": [
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
-          "semantic.feedback.error.content-default"
+          "semantic.feedback.error.content-default",
+          "semantic.feedback.error.content.strong"
         ],
         "figma": []
       }
@@ -3233,11 +3241,22 @@
       "usos": {
         "css": [
           {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          },
+          {
             "file": "css/utilities/elevation.css",
             "count": 1
           }
         ],
-        "tokens": [],
+        "tokens": [
+          "semantic.shadow.overlay",
+          "semantic.shadow.overlay"
+        ],
         "figma": []
       }
     },
@@ -4225,10 +4244,12 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 12
           }
         ],
         "tokens": [
+          "component.accordion.item.bg.default",
+          "component.accordion.item.bg.hover",
           "component.badge.bg.neutral.default",
           "component.card.bg.default",
           "component.checkbox.box.fill.unchecked.default",
@@ -4299,10 +4320,11 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
+          "component.combobox.listbox.container.bg.default",
           "component.menu.surface.bg.default",
           "component.modal.bg.default"
         ],
@@ -4332,7 +4354,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 11
+            "count": 13
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -4344,10 +4366,12 @@
           }
         ],
         "tokens": [
+          "component.accordion.trigger.content.color.default",
           "component.alert.title.color.subtle",
           "component.alert.description.color.subtle",
           "component.badge.label.color.neutral.solid",
           "component.card.title.color.default",
+          "component.combobox.option.content.color.selected",
           "component.field.value.color.default",
           "component.form-field.label.color.default",
           "component.form-field.description.color.default",
@@ -4364,7 +4388,7 @@
     "semantic.content.default": {
       "layer": "semantic",
       "type": "color",
-      "references": "foundation.color.neutral.600",
+      "references": "foundation.color.neutral.700",
       "sentido": "Texto secundário — descrições, helper text, meta-info.",
       "escopo": [
         "color",
@@ -4384,7 +4408,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 13
+            "count": 18
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -4396,6 +4420,9 @@
           }
         ],
         "tokens": [
+          "component.accordion.trigger.content.color.disabled",
+          "component.accordion.content.color.default",
+          "component.accordion.content.color.disabled",
           "component.badge.label.color.neutral.subtle",
           "component.breadcrumb.label.color.current",
           "component.card.body.color.default",
@@ -4406,6 +4433,8 @@
           "component.menu.item.content.color.default",
           "component.modal.body.color.default",
           "component.modal.description.color.default",
+          "component.pagination.item.content.color.default",
+          "component.pagination.item.content.color.hover",
           "component.tabs.label.color.default",
           "component.toggle.thumb.fill.off.default",
           "component.toggle.thumb.fill.off.focus",
@@ -4418,7 +4447,7 @@
     "semantic.content.subtle": {
       "layer": "semantic",
       "type": "color",
-      "references": "foundation.color.neutral.500",
+      "references": "foundation.color.neutral.600",
       "sentido": "Texto terciário — caption, footnote, timestamps.",
       "escopo": [
         "color",
@@ -4461,7 +4490,7 @@
     "semantic.content.disabled": {
       "layer": "semantic",
       "type": "color",
-      "references": "foundation.color.neutral.500",
+      "references": "foundation.color.neutral.400",
       "sentido": "Texto disabled — controles e items inativos.",
       "escopo": [
         "color",
@@ -4473,7 +4502,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 8
+            "count": 9
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -4481,7 +4510,7 @@
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 2
+            "count": 1
           }
         ],
         "tokens": [
@@ -4491,11 +4520,11 @@
           "component.form-field.helper.color.disabled",
           "component.menu.item.content.color.disabled",
           "component.menu.item.meta.color.disabled",
+          "component.pagination.item.content.color.disabled",
           "component.tabs.label.color.disabled",
           "component.toggle.thumb.fill.off.disabled",
           "semantic.toned.content-disabled",
           "semantic.icon.color.disabled",
-          "semantic.toned.content-disabled",
           "semantic.icon.color.disabled"
         ],
         "figma": []
@@ -4553,13 +4582,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
+          "component.accordion.item.border-color.default",
           "component.badge.border-color.neutral.subtle",
           "component.card-interactive.border-color.default",
-          "component.card.border-color.elevated"
+          "component.card.border-color.outlined"
         ],
         "figma": []
       }
@@ -4604,12 +4634,11 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 3
           }
         ],
         "tokens": [
-          "component.card.border-color.outlined",
-          "component.divider.line.color.default",
+          "component.combobox.listbox.container.border-color.default",
           "component.field.border-color.readonly",
           "component.menu.surface.border-color.default"
         ],
@@ -4633,11 +4662,16 @@
             "count": 1
           },
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/tokens/generated/component.css",
-            "count": 12
+            "count": 13
           }
         ],
         "tokens": [
+          "component.accordion.item.border-width.default",
           "component.alert.border-width.default",
           "component.badge.border-width.default",
           "component.button.border-width.default",
@@ -4718,10 +4752,11 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 8
+            "count": 9
           }
         ],
         "tokens": [
+          "component.accordion.item.border-color.focus",
           "component.button.border-color.outline.focus",
           "component.checkbox.box.border-color.unchecked.focus",
           "component.field.border-color.focus",
@@ -4993,6 +5028,7 @@
           "component.form-field.label.font-family.default",
           "component.form-field.required.font-family.default",
           "component.input.text.font-family.default",
+          "component.pagination.item.font-family.default",
           "component.select.text.font-family.default",
           "component.textarea.text.font-family.default"
         ],
@@ -5016,6 +5052,7 @@
           "component.breadcrumb.separator.font-weight.default",
           "component.card.body.font-weight.default",
           "component.input.text.font-weight.default",
+          "component.pagination.item.font-weight.default",
           "component.select.text.font-weight.default",
           "component.textarea.text.font-weight.default",
           "component.tooltip.label.font-weight.default"
@@ -5079,6 +5116,7 @@
           "component.button.label.font-weight.default",
           "component.card.subtitle.font-weight.default",
           "component.form-field.error.font-weight.default",
+          "component.pagination.item.font-weight.current",
           "component.tabs.label.font-weight.default"
         ],
         "figma": []
@@ -5172,6 +5210,7 @@
           "component.form-field.label.font-size.default",
           "component.form-field.required.font-size.default",
           "component.input.text.font-size.md",
+          "component.pagination.item.font-size.sm",
           "component.select.text.font-size.md",
           "component.tabs.label.font-size.default",
           "component.textarea.text.font-size.md",
@@ -5195,6 +5234,7 @@
         "tokens": [
           "component.button.label.font-size.lg",
           "component.input.text.font-size.lg",
+          "component.pagination.item.font-size.md",
           "component.select.text.font-size.lg",
           "component.textarea.text.font-size.lg"
         ],
@@ -5213,7 +5253,9 @@
       "decisao": "Aliasado a Foundation foundation.typography.font.size.18.",
       "usos": {
         "css": [],
-        "tokens": [],
+        "tokens": [
+          "component.pagination.item.font-size.lg"
+        ],
         "figma": []
       }
     },
@@ -5315,6 +5357,7 @@
           "component.form-field.label.line-height.default",
           "component.form-field.required.line-height.default",
           "component.input.text.line-height.md",
+          "component.pagination.item.line-height.sm",
           "component.select.text.line-height.md",
           "component.tabs.label.line-height.default",
           "component.textarea.text.line-height.md",
@@ -5338,6 +5381,7 @@
         "tokens": [
           "component.button.label.line-height.lg",
           "component.input.text.line-height.lg",
+          "component.pagination.item.line-height.md",
           "component.select.text.line-height.lg",
           "component.textarea.text.line-height.lg"
         ],
@@ -5358,7 +5402,8 @@
         "css": [],
         "tokens": [
           "component.avatar.initials.line-height.lg",
-          "component.card.title.line-height.default"
+          "component.card.title.line-height.default",
+          "component.pagination.item.line-height.lg"
         ],
         "figma": []
       }
@@ -5425,6 +5470,10 @@
             "count": 3
           },
           {
+            "file": "css/components/combobox.css",
+            "count": 4
+          },
+          {
             "file": "css/components/input.css",
             "count": 2
           },
@@ -5439,6 +5488,10 @@
           {
             "file": "css/components/modal.css",
             "count": 1
+          },
+          {
+            "file": "css/components/pagination.css",
+            "count": 2
           },
           {
             "file": "css/components/radio.css",
@@ -5516,6 +5569,10 @@
             "count": 3
           },
           {
+            "file": "css/components/combobox.css",
+            "count": 4
+          },
+          {
             "file": "css/components/input.css",
             "count": 2
           },
@@ -5530,6 +5587,10 @@
           {
             "file": "css/components/modal.css",
             "count": 1
+          },
+          {
+            "file": "css/components/pagination.css",
+            "count": 2
           },
           {
             "file": "css/components/radio.css",
@@ -5887,7 +5948,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 15
+            "count": 16
           }
         ],
         "tokens": [
@@ -5901,6 +5962,7 @@
           "component.checkbox.mark.fill.checked.focus",
           "component.checkbox.mark.fill.indeterminate.default",
           "component.checkbox.mark.fill.indeterminate.focus",
+          "component.pagination.item.content.color.current",
           "component.radio.dot.fill.selected.default",
           "component.radio.dot.fill.selected.focus",
           "component.toggle.thumb.fill.on.default",
@@ -5967,7 +6029,7 @@
     "semantic.toned.content-disabled": {
       "layer": "semantic",
       "type": "color",
-      "references": "semantic.content.disabled",
+      "references": "foundation.color.disabled.brand.light",
       "sentido": "Cor de texto/ícone de ação brand translúcida em estado disabled.",
       "escopo": [
         "color",
@@ -6450,7 +6512,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 3
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -6465,8 +6527,6 @@
           "component.badge.label.color.error.subtle",
           "component.form-field.required.color.default",
           "component.form-field.error.color.default",
-          "component.menu.item.content.color.destructive",
-          "component.menu.item.meta.color.destructive",
           "semantic.icon.color.error",
           "semantic.icon.color.error"
         ],
@@ -6610,24 +6670,15 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
-          },
-          {
-            "file": "css/tokens/generated/theme-dark.css",
-            "count": 1
-          },
-          {
-            "file": "css/tokens/generated/theme-light.css",
-            "count": 1
+            "count": 5
           }
         ],
         "tokens": [
+          "component.accordion.item.bg.disabled",
           "component.checkbox.box.fill.unchecked.disabled",
           "component.field.bg.disabled",
           "component.radio.control.fill.unselected.disabled",
-          "component.toggle.track.fill.off.disabled",
-          "semantic.toned.background.disabled",
-          "semantic.toned.background.disabled"
+          "component.toggle.track.fill.off.disabled"
         ],
         "figma": []
       }
@@ -6731,23 +6782,37 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/menu.css",
             "count": 1
           },
           {
+            "file": "css/components/pagination.css",
+            "count": 1
+          },
+          {
             "file": "css/tokens/generated/component.css",
-            "count": 12
+            "count": 18
           }
         ],
         "tokens": [
           "component.badge.padding-y.default",
           "component.button.gap.sm",
+          "component.combobox.listbox.container.gap.default",
+          "component.divider.inset.padding-x.2xs",
+          "component.divider.inset.padding-y.2xs",
+          "component.field.icon-frame.padding-x.default",
+          "component.field.text-frame.padding-x.default",
           "component.form-field.label-row.gap.default",
           "component.form-field.error.padding-top.default",
           "component.form-field.error.icon-frame.padding-x.default",
           "component.input.icon-frame.padding-x.default",
           "component.input.text-frame.padding-x.default",
           "component.menu.surface.gap.default",
+          "component.pagination.gap.default",
           "component.select.chevron-frame.padding-x.default",
           "component.select.icon-frame.padding-x.default",
           "component.select.text-frame.padding-x.default",
@@ -6788,7 +6853,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 24
+            "count": 28
           },
           {
             "file": "css/utilities/layout.css",
@@ -6804,6 +6869,11 @@
           "component.button.gap.md",
           "component.button.label-frame.padding-x.default",
           "component.checkbox.content.gap.default",
+          "component.combobox.padding-x.sm",
+          "component.divider.inset.padding-x.xs",
+          "component.divider.inset.padding-y.xs",
+          "component.field.gap.sm",
+          "component.field.gap.md",
           "component.form-field.gap.default",
           "component.form-field.error.gap.default",
           "component.form-field.stack.gap.default",
@@ -6818,7 +6888,6 @@
           "component.select.gap.md",
           "component.select.padding-x.sm",
           "component.toggle.content.gap.default",
-          "component.tooltip.content.padding-y.default",
           "component.tooltip.arrow.depth.default"
         ],
         "figma": []
@@ -6860,7 +6929,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 30
+            "count": 35
           },
           {
             "file": "css/utilities/layout.css",
@@ -6874,12 +6943,17 @@
           "component.button.padding-y.sm",
           "component.button.gap.lg",
           "component.button.icon-only-padding.md",
-          "component.card.header.padding-bottom.default",
           "component.card.header.gap.default",
           "component.card.footer.gap.default",
           "component.checkbox.target.gap.default",
           "component.checkbox.group.options.gap.default",
+          "component.combobox.listbox.container.padding.default",
+          "component.combobox.option.gap.default",
+          "component.combobox.padding-x.md",
+          "component.divider.inset.padding-x.sm",
+          "component.divider.inset.padding-y.sm",
           "component.field.padding-y.sm",
+          "component.field.gap.lg",
           "component.input.gap.lg",
           "component.input.padding-x.md",
           "component.menu.surface.padding.default",
@@ -6896,7 +6970,7 @@
           "component.select.padding-x.md",
           "component.textarea.padding-x.sm",
           "component.toggle.target.gap.default",
-          "component.tooltip.content.padding-x.default",
+          "component.tooltip.content.padding-y.default",
           "component.tooltip.arrow.base.default"
         ],
         "figma": []
@@ -6930,7 +7004,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 16
+            "count": 22
           },
           {
             "file": "css/utilities/layout.css",
@@ -6938,11 +7012,16 @@
           }
         ],
         "tokens": [
+          "component.accordion.trigger.gap.md",
+          "component.accordion.content.gap.md",
           "component.alert.padding.default",
           "component.button.padding-x.md",
           "component.button.padding-y.lg",
           "component.button.icon-only-padding.lg",
           "component.card.container.gap.default",
+          "component.combobox.padding-x.lg",
+          "component.divider.inset.padding-x.md",
+          "component.divider.inset.padding-y.md",
           "component.field.padding-y.lg",
           "component.input.padding-x.lg",
           "component.menu.item.padding-x.lg",
@@ -6953,7 +7032,8 @@
           "component.select.padding-x.lg",
           "component.tabs.item.padding-top.default",
           "component.tabs.item.indicator-gap.default",
-          "component.textarea.padding-x.md"
+          "component.textarea.padding-x.md",
+          "component.tooltip.content.padding-x.default"
         ],
         "figma": []
       }
@@ -6974,7 +7054,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 13
+            "count": 10
           },
           {
             "file": "css/utilities/layout.css",
@@ -6982,11 +7062,8 @@
           }
         ],
         "tokens": [
+          "component.accordion.trigger.padding-y.md",
           "component.button.padding-x.lg",
-          "component.card.header.padding-x.default",
-          "component.card.header.padding-top.default",
-          "component.card.body.padding-x.default",
-          "component.card.body.padding-bottom.default",
           "component.modal.container.padding.sm",
           "component.modal.container.gap.md",
           "component.modal.header.gap.default",
@@ -7015,7 +7092,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 7
           },
           {
             "file": "css/utilities/layout.css",
@@ -7023,6 +7100,9 @@
           }
         ],
         "tokens": [
+          "component.accordion.trigger.padding-x.md",
+          "component.accordion.content.padding-x.md",
+          "component.accordion.content.padding-bottom.md",
           "component.card.container.padding.default",
           "component.modal.overlay.padding.default",
           "component.modal.container.padding.md",
@@ -7090,13 +7170,14 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 3
+            "count": 4
           }
         ],
         "tokens": [
           "component.checkbox.box.radius.default",
-          "component.tabs.focus-ring.radius.default",
-          "component.tooltip.content.radius.default"
+          "component.combobox.option.radius.default",
+          "component.menu.item.radius.default",
+          "component.tabs.focus-ring.radius.default"
         ],
         "figma": []
       }
@@ -7115,7 +7196,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 8
+            "count": 11
           }
         ],
         "tokens": [
@@ -7124,9 +7205,12 @@
           "component.checkbox.focus-ring.radius.default",
           "component.divider.line.radius.default",
           "component.field.radius",
-          "component.menu.item.radius.default",
+          "component.menu.focus-ring.radius.default",
+          "component.pagination.item.radius.default",
+          "component.pagination.focus-ring.radius.default",
           "component.skeleton.text.radius.default",
-          "component.skeleton.rectangle.radius.default"
+          "component.skeleton.rectangle.radius.default",
+          "component.tooltip.content.radius.default"
         ],
         "figma": []
       }
@@ -7149,16 +7233,18 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 9
+            "count": 11
           }
         ],
         "tokens": [
+          "component.accordion.item.radius.default",
           "component.alert.radius.default",
           "component.button.focus-ring.radius.default",
           "component.card.radius.default",
+          "component.combobox.focus-ring.radius.default",
+          "component.combobox.listbox.container.radius.default",
           "component.input.focus-ring.radius.default",
           "component.menu.surface.radius.default",
-          "component.menu.focus-ring.radius.default",
           "component.modal.radius.default",
           "component.select.focus-ring.radius.default",
           "component.textarea.focus-ring.radius.default"
@@ -7180,10 +7266,11 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
+          "component.accordion.focus-ring.radius.default",
           "component.card-interactive.focus-ring.radius.default"
         ],
         "figma": []
@@ -7241,7 +7328,7 @@
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
-            "count": 2
+            "count": 3
           },
           {
             "file": "css/tokens/generated/theme-light.css",
@@ -7251,6 +7338,7 @@
         "tokens": [
           "semantic.control.toggle.thumb.gap",
           "semantic.space.2xs",
+          "semantic.space.hairline",
           "semantic.control.toggle.thumb.gap",
           "semantic.space.2xs"
         ],
@@ -8463,7 +8551,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 14
+            "count": 15
           },
           {
             "file": "css/tokens/generated/theme-dark.css",
@@ -8484,6 +8572,7 @@
           "component.checkbox.box.fill.indeterminate.default",
           "component.checkbox.box.fill.indeterminate.focus",
           "component.modal.action.fill.brand",
+          "component.pagination.item.bg.current",
           "component.radio.control.fill.selected.default",
           "component.radio.control.fill.selected.focus",
           "component.tabs.indicator.fill.active",
@@ -8679,12 +8768,13 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 2
+            "count": 3
           }
         ],
         "tokens": [
           "component.button.bg.outline.hover",
-          "component.menu.item.bg.hover"
+          "component.combobox.option.bg.selected",
+          "component.pagination.item.bg.hover"
         ],
         "figma": []
       }
@@ -8719,11 +8809,12 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
-          "component.button.bg.ghost.hover"
+          "component.button.bg.ghost.hover",
+          "component.menu.item.bg.hover.default"
         ],
         "figma": []
       }
@@ -9162,15 +9253,17 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 12
           }
         ],
         "tokens": [
           "component.button.icon.size.sm",
           "component.checkbox.box.size.sm",
+          "component.field.icon.size.sm",
           "component.form-field.error.icon.size.default",
           "component.input.icon.size.sm",
           "component.menu.item.icon.size.sm",
+          "component.pagination.icon.size.sm",
           "component.radio.control.size.sm",
           "component.select.chevron.size.sm",
           "component.select.icon.size.sm",
@@ -9207,14 +9300,17 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 10
+            "count": 13
           }
         ],
         "tokens": [
+          "component.accordion.chevron.size.md",
+          "component.accordion.leading-icon.size.md",
           "component.alert.icon.size.default",
           "component.alert.close.icon-size.default",
           "component.button.icon.size.md",
           "component.checkbox.box.size.md",
+          "component.field.icon.size.md",
           "component.input.icon.size.md",
           "component.menu.item.icon.size.md",
           "component.modal.close.icon-size.sm",
@@ -9244,12 +9340,13 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 11
+            "count": 12
           }
         ],
         "tokens": [
           "component.button.icon.size.lg",
           "component.checkbox.box.size.lg",
+          "component.field.icon.size.lg",
           "component.input.icon.size.lg",
           "component.menu.item.icon.size.lg",
           "component.modal.close.icon-size.md",
@@ -9282,7 +9379,7 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 12
+            "count": 15
           }
         ],
         "tokens": [
@@ -9290,9 +9387,12 @@
           "component.button.height.sm",
           "component.button.icon-only-width.sm",
           "component.checkbox.target.height.sm",
+          "component.combobox.height.sm",
           "component.input.height.sm",
           "component.menu.item.height.sm",
           "component.modal.close.size.sm",
+          "component.pagination.item.height.sm",
+          "component.pagination.item.min-width.sm",
           "component.radio.target.height.sm",
           "component.select.height.sm",
           "component.spinner.size.lg",
@@ -9317,7 +9417,7 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 11
+            "count": 14
           }
         ],
         "tokens": [
@@ -9325,9 +9425,12 @@
           "component.button.height.md",
           "component.button.icon-only-width.md",
           "component.checkbox.target.height.md",
+          "component.combobox.height.md",
           "component.input.height.md",
           "component.menu.item.height.md",
           "component.modal.close.size.md",
+          "component.pagination.item.height.md",
+          "component.pagination.item.min-width.md",
           "component.radio.target.height.md",
           "component.select.height.md",
           "component.skeleton.circle.size.default",
@@ -9351,16 +9454,20 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 9
+            "count": 13
           }
         ],
         "tokens": [
+          "component.accordion.trigger.height.md",
           "component.button.height.lg",
           "component.button.icon-only-width.lg",
           "component.checkbox.target.height.lg",
+          "component.combobox.height.lg",
           "component.input.height.lg",
           "component.menu.item.height.lg",
           "component.modal.close.size.lg",
+          "component.pagination.item.height.lg",
+          "component.pagination.item.min-width.lg",
           "component.radio.target.height.lg",
           "component.select.height.lg",
           "component.toggle.target.height.lg"
@@ -9600,10 +9707,6 @@
       "decisao": "Aliasado a Foundation foundation.shadow.xl.",
       "usos": {
         "css": [
-          {
-            "file": "css/components/menu.css",
-            "count": 1
-          },
           {
             "file": "css/tokens/generated/component.css",
             "count": 1
@@ -10022,6 +10125,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/menu.css",
             "count": 1
           },
@@ -10310,12 +10417,13 @@
           },
           {
             "file": "css/tokens/generated/theme-light.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
           "semantic.brand.background.disabled",
-          "semantic.brand.background.disabled"
+          "semantic.brand.background.disabled",
+          "semantic.toned.content-disabled"
         ],
         "figma": []
       }
@@ -10347,8 +10455,15 @@
       "contexto": "Aplicado via Semantic toned.background.disabled. Não use direto em componente.",
       "decisao": "Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.toned.background.disabled"
+        ],
         "figma": []
       }
     },
@@ -10363,8 +10478,15 @@
       "contexto": "Aplicado via Semantic toned.background.disabled. Não use direto em componente.",
       "decisao": "Nome aninhado espelha Figma color/disabled/... e ADR-011 (sem achatamento com hífen). Alpha preserva forma do botão sem competir visualmente — sinaliza não-interativo sem sumir.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.toned.background.disabled"
+        ],
         "figma": []
       }
     },
@@ -10463,7 +10585,7 @@
     "semantic.toned.background.disabled": {
       "layer": "semantic",
       "type": "color",
-      "references": "semantic.background.disabled",
+      "references": "foundation.color.disabled.brand.toned.light",
       "sentido": "Fill de ação brand translúcida em estado disabled.",
       "escopo": [
         "background-color"
@@ -11843,7 +11965,7 @@
     "component.tooltip.content.padding-x.default": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.sm",
+      "references": "semantic.space.md",
       "sentido": "Padding horizontal do content Tooltip.",
       "escopo": [
         "padding-left",
@@ -11865,7 +11987,7 @@
     "component.tooltip.content.padding-y.default": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.space.xs",
+      "references": "semantic.space.sm",
       "sentido": "Padding vertical do content Tooltip.",
       "escopo": [
         "padding-top",
@@ -11887,7 +12009,7 @@
     "component.tooltip.content.radius.default": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.radius.sm",
+      "references": "semantic.radius.md",
       "sentido": "Radius do content Tooltip.",
       "escopo": [
         "border-radius"
@@ -12494,55 +12616,6 @@
         "figma": []
       }
     },
-    "component.card.header.padding-x.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.space.lg",
-      "sentido": "Padding horizontal do header Card.",
-      "escopo": [
-        "padding-left",
-        "padding-right"
-      ],
-      "contexto": "Component token do contrato anatômico Card Header. Binda paddingLeft/paddingRight dos headers nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro horizontal público do header.",
-      "usos": {
-        "css": [],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.card.header.padding-top.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.space.lg",
-      "sentido": "Padding top do header Card.",
-      "escopo": [
-        "padding-top"
-      ],
-      "contexto": "Component token do contrato anatômico Card Header. Binda paddingTop dos headers nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro superior público do header.",
-      "usos": {
-        "css": [],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.card.header.padding-bottom.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.space.sm",
-      "sentido": "Padding bottom do header Card.",
-      "escopo": [
-        "padding-bottom"
-      ],
-      "contexto": "Component token do contrato anatômico Card Header. Binda paddingBottom dos headers nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.space.sm porque 8px é escala reutilizável, mas no Card documenta a separação pública entre header e body.",
-      "usos": {
-        "css": [],
-        "tokens": [],
-        "figma": []
-      }
-    },
     "component.card.header.gap.default": {
       "layer": "component",
       "type": "dimension",
@@ -12560,39 +12633,6 @@
             "count": 1
           }
         ],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.card.body.padding-x.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.space.lg",
-      "sentido": "Padding horizontal do body Card.",
-      "escopo": [
-        "padding-left",
-        "padding-right"
-      ],
-      "contexto": "Component token do contrato anatômico Card Body. Binda paddingLeft/paddingRight dos bodies nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro horizontal público do body.",
-      "usos": {
-        "css": [],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.card.body.padding-bottom.default": {
-      "layer": "component",
-      "type": "dimension",
-      "references": "semantic.space.lg",
-      "sentido": "Padding bottom do body Card.",
-      "escopo": [
-        "padding-bottom"
-      ],
-      "contexto": "Component token do contrato anatômico Card Body. Binda paddingBottom dos bodies nas variantes Style do Figma e substitui consumo direto de Semantic no CSS.",
-      "decisao": "Alias 1:1 para semantic.space.lg porque 16px é escala reutilizável, mas no Card documenta o respiro inferior público do body.",
-      "usos": {
-        "css": [],
         "tokens": [],
         "figma": []
       }
@@ -13387,7 +13427,7 @@
     "component.divider.line.color.default": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.border.subtle",
+      "references": "semantic.border.overlay.default",
       "sentido": "Cor da linha do Divider.",
       "escopo": [],
       "contexto": "Usado no fill dos variants Horizontal e Vertical do Figma e no background-color de ds-divider no CSS.",
@@ -15973,6 +16013,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/select.css",
             "count": 1
           }
@@ -15995,6 +16039,10 @@
       "decisao": "Alias para semantic.content.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/select.css",
             "count": 1
@@ -16033,6 +16081,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 2
+          },
+          {
             "file": "css/components/select.css",
             "count": 2
           }
@@ -16054,6 +16106,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 3
+          },
+          {
             "file": "css/components/select.css",
             "count": 3
           }
@@ -16074,6 +16130,10 @@
       "decisao": "Alias para semantic.space.sm porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 2
+          },
           {
             "file": "css/components/select.css",
             "count": 2
@@ -16098,6 +16158,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/select.css",
             "count": 1
           }
@@ -16120,6 +16184,10 @@
       "decisao": "Alias para semantic.content.disabled porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/select.css",
             "count": 1
@@ -16205,6 +16273,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/select.css",
             "count": 1
           }
@@ -16225,6 +16297,10 @@
       "decisao": "Alias para semantic.typography.body.font-size.xs porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/select.css",
             "count": 1
@@ -16247,6 +16323,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 2
+          },
+          {
             "file": "css/components/select.css",
             "count": 2
           }
@@ -16267,6 +16347,10 @@
       "decisao": "Alias para semantic.typography.body.font-size.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/select.css",
             "count": 1
@@ -16289,6 +16373,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/select.css",
             "count": 1
           }
@@ -16309,6 +16397,10 @@
       "decisao": "Alias para semantic.typography.body.letter-spacing.normal porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/select.css",
             "count": 1
@@ -16332,6 +16424,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/select.css",
             "count": 1
           }
@@ -16354,6 +16450,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 2
+          },
+          {
             "file": "css/components/select.css",
             "count": 2
           }
@@ -16375,6 +16475,10 @@
       "decisao": "Alias para semantic.typography.body.line-height.md porque o valor já está definido na camada apropriada; fica em Component para documentar e estabilizar o contrato público do Select.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/select.css",
             "count": 1
@@ -16827,6 +16931,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 2
+          },
+          {
             "file": "css/components/select.css",
             "count": 4
           }
@@ -16848,6 +16956,10 @@
       "decisao": "Alias 1:1 para semantic.space.xs para manter 4px de respiro horizontal ao redor do ícone leading.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 2
+          },
           {
             "file": "css/components/select.css",
             "count": 4
@@ -19135,6 +19247,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 3
+          },
+          {
             "file": "css/components/select.css",
             "count": 7
           }
@@ -19156,6 +19272,10 @@
       "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.sm.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 3
+          },
           {
             "file": "css/components/select.css",
             "count": 7
@@ -19179,6 +19299,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 3
+          },
+          {
             "file": "css/components/select.css",
             "count": 7
           }
@@ -19200,6 +19324,10 @@
       "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.xs.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 4
+          },
           {
             "file": "css/components/select.css",
             "count": 4
@@ -19223,6 +19351,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 4
+          },
+          {
             "file": "css/components/select.css",
             "count": 4
           }
@@ -19244,6 +19376,10 @@
       "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.size.md.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 4
+          },
           {
             "file": "css/components/select.css",
             "count": 4
@@ -19960,15 +20096,19 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 7
+            "count": 11
           }
         ],
         "tokens": [
+          "component.accordion.chevron.color.default",
+          "component.accordion.leading-icon.color.default",
           "component.alert.icon.color.info.subtle",
           "component.alert.close.icon.color.subtle",
+          "component.field.icon.color.default",
           "component.input.icon.color.default",
           "component.menu.item.icon.color.default",
           "component.modal.close.color.default",
+          "component.pagination.icon.color.default",
           "component.select.chevron.color.default",
           "component.select.icon.color.default"
         ],
@@ -20031,10 +20171,13 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 4
+            "count": 7
           }
         ],
         "tokens": [
+          "component.accordion.chevron.color.disabled",
+          "component.accordion.leading-icon.color.disabled",
+          "component.field.icon.color.disabled",
           "component.input.icon.color.disabled",
           "component.menu.item.icon.color.disabled",
           "component.select.chevron.color.disabled",
@@ -20172,8 +20315,7 @@
         ],
         "tokens": [
           "component.alert.icon.color.error.subtle",
-          "component.form-field.error.icon.color.default",
-          "component.menu.item.icon.color.destructive"
+          "component.form-field.error.icon.color.default"
         ],
         "figma": []
       }
@@ -20301,13 +20443,15 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 5
+            "count": 7
           }
         ],
         "tokens": [
           "component.button.icon.stroke-width.sm",
+          "component.field.icon.stroke-width.sm",
           "component.input.icon.stroke-width.sm",
           "component.menu.item.icon.stroke-width.sm",
+          "component.pagination.icon.stroke-width.sm",
           "component.select.chevron.stroke-width.sm",
           "component.select.icon.stroke-width.sm"
         ],
@@ -20333,14 +20477,17 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 8
+            "count": 11
           }
         ],
         "tokens": [
+          "component.accordion.chevron.stroke-width.md",
+          "component.accordion.leading-icon.stroke-width.md",
           "component.alert.icon.stroke-width.default",
           "component.alert.close.icon.stroke-width.default",
           "component.avatar.icon.stroke-width.sm",
           "component.button.icon.stroke-width.md",
+          "component.field.icon.stroke-width.md",
           "component.input.icon.stroke-width.md",
           "component.menu.item.icon.stroke-width.md",
           "component.select.chevron.stroke-width.md",
@@ -20368,12 +20515,13 @@
           },
           {
             "file": "css/tokens/generated/component.css",
-            "count": 7
+            "count": 8
           }
         ],
         "tokens": [
           "component.avatar.icon.stroke-width.md",
           "component.button.icon.stroke-width.lg",
+          "component.field.icon.stroke-width.lg",
           "component.input.icon.stroke-width.lg",
           "component.menu.item.icon.stroke-width.lg",
           "component.modal.close.icon.stroke-width.default",
@@ -20497,6 +20645,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/input.css",
             "count": 7
           },
@@ -20527,6 +20679,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/input.css",
             "count": 1
           },
@@ -20556,6 +20712,10 @@
       "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.surface.default.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/input.css",
             "count": 2
@@ -20589,6 +20749,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/input.css",
             "count": 1
           },
@@ -20620,6 +20784,10 @@
       "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.control-disabled.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/input.css",
             "count": 1
@@ -20653,6 +20821,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 3
+          },
+          {
             "file": "css/components/input.css",
             "count": 5
           },
@@ -20684,6 +20856,10 @@
       "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.error-hover.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/input.css",
             "count": 2
@@ -20717,6 +20893,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/input.css",
             "count": 1
           },
@@ -20748,6 +20928,10 @@
       "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.focus.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/input.css",
             "count": 1
@@ -20781,6 +20965,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/input.css",
             "count": 1
           },
@@ -20813,6 +21001,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/input.css",
             "count": 2
           },
@@ -20843,6 +21035,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 2
+          },
+          {
             "file": "css/components/input.css",
             "count": 2
           },
@@ -20871,6 +21067,10 @@
       "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.space.sm.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 2
+          },
           {
             "file": "css/components/input.css",
             "count": 2
@@ -20901,6 +21101,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 3
+          },
+          {
             "file": "css/components/input.css",
             "count": 2
           },
@@ -20929,6 +21133,10 @@
       "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.space.md.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 2
+          },
           {
             "file": "css/components/input.css",
             "count": 2
@@ -20962,6 +21170,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/input.css",
             "count": 1
           },
@@ -20994,6 +21206,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/input.css",
             "count": 1
           },
@@ -21022,6 +21238,10 @@
       "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.radius.md.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/input.css",
             "count": 1
@@ -21055,6 +21275,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/input.css",
             "count": 2
           },
@@ -21087,6 +21311,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/input.css",
             "count": 2
           },
@@ -21118,6 +21346,10 @@
       "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.content.default.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/input.css",
             "count": 1
@@ -21171,6 +21403,10 @@
             "count": 1
           },
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/input.css",
             "count": 1
           },
@@ -21184,6 +21420,10 @@
           },
           {
             "file": "css/components/modal.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/pagination.css",
             "count": 1
           },
           {
@@ -21231,6 +21471,10 @@
             "count": 1
           },
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/input.css",
             "count": 1
           },
@@ -21266,6 +21510,10 @@
       "decisao": "Mantido no registry para refletir o token presente em tokens/ e evitar valores soltos no CSS/Figma. Alias para semantic.border.control-default.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/input.css",
             "count": 1
@@ -21341,6 +21589,10 @@
             "count": 2
           },
           {
+            "file": "css/components/combobox.css",
+            "count": 2
+          },
+          {
             "file": "css/components/input.css",
             "count": 2
           },
@@ -21355,6 +21607,10 @@
           {
             "file": "css/components/modal.css",
             "count": 3
+          },
+          {
+            "file": "css/components/pagination.css",
+            "count": 2
           },
           {
             "file": "css/components/radio.css",
@@ -21419,10 +21675,11 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
+          "component.accordion.item.border-color.hover",
           "component.radio.control.border-color.selected.hover"
         ],
         "figma": []
@@ -21506,10 +21763,11 @@
         "css": [
           {
             "file": "css/tokens/generated/component.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [
+          "component.divider.line.color.default",
           "component.spinner.track.border-color.default"
         ],
         "figma": []
@@ -23155,27 +23413,6 @@
     "component.card.border-color.outlined": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.border.subtle",
-      "sentido": "Contrato border-color de card, sincronizado a partir das Variables Figma atuais.",
-      "escopo": [
-        "stroke"
-      ],
-      "contexto": "Usado para estabilizar o contrato anatômico do componente card entre Figma, JSON e CSS.",
-      "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
-      "usos": {
-        "css": [
-          {
-            "file": "css/components/card.css",
-            "count": 1
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.card.border-color.elevated": {
-      "layer": "component",
-      "type": "color",
       "references": "semantic.border.default",
       "sentido": "Contrato border-color de card, sincronizado a partir das Variables Figma atuais.",
       "escopo": [
@@ -23187,7 +23424,7 @@
         "css": [
           {
             "file": "css/components/card.css",
-            "count": 1
+            "count": 2
           }
         ],
         "tokens": [],
@@ -23660,7 +23897,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente select entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23677,7 +23919,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente select entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23694,7 +23941,12 @@
       "contexto": "Usado para estabilizar o contrato anatômico do componente select entre Figma, JSON e CSS.",
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -23712,6 +23964,10 @@
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/select.css",
             "count": 1
@@ -23735,6 +23991,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/select.css",
             "count": 1
           }
@@ -23756,6 +24016,10 @@
       "decisao": "Mantido porque existe como Variable no Figma e participa do contrato de componente publicado.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/select.css",
             "count": 1
@@ -25332,6 +25596,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/menu.css",
             "count": 1
           }
@@ -25352,6 +25620,10 @@
       "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/menu.css",
             "count": 1
@@ -25374,6 +25646,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/menu.css",
             "count": 1
           }
@@ -25385,7 +25661,7 @@
     "component.menu.item.radius.default": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.radius.md",
+      "references": "semantic.radius.sm",
       "sentido": "Radius anatômico do item de Menu.",
       "escopo": [
         "Menu"
@@ -25479,6 +25755,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/menu.css",
             "count": 1
           }
@@ -25499,6 +25779,10 @@
       "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/menu.css",
             "count": 1
@@ -25521,6 +25805,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/menu.css",
             "count": 1
           }
@@ -25542,26 +25830,9 @@
       "usos": {
         "css": [
           {
-            "file": "css/components/menu.css",
+            "file": "css/components/combobox.css",
             "count": 1
-          }
-        ],
-        "tokens": [],
-        "figma": []
-      }
-    },
-    "component.menu.item.bg.hover": {
-      "layer": "component",
-      "type": "color",
-      "references": "semantic.outline.background.hover",
-      "sentido": "Background anatômico do item de Menu por state.",
-      "escopo": [
-        "Menu"
-      ],
-      "contexto": "Usado pelos itens interativos do Menu.",
-      "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
-      "usos": {
-        "css": [
+          },
           {
             "file": "css/components/menu.css",
             "count": 1
@@ -25605,6 +25876,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/menu.css",
             "count": 1
           }
@@ -25626,6 +25901,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/menu.css",
             "count": 4
           }
@@ -25646,6 +25925,10 @@
       "decisao": "Token Component criado para espelhar a anatomia aprovada em Figma e manter o CSS consumidor fora de hardcodes e de Foundation.",
       "usos": {
         "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
           {
             "file": "css/components/menu.css",
             "count": 1
@@ -25689,6 +25972,10 @@
       "usos": {
         "css": [
           {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
             "file": "css/components/menu.css",
             "count": 1
           }
@@ -25700,7 +25987,7 @@
     "component.menu.item.content.color.destructive": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.feedback.error.content-default",
+      "references": "semantic.feedback.error.content.strong",
       "sentido": "Cor anatômica do conteúdo do item de Menu por state.",
       "escopo": [
         "Menu"
@@ -25763,7 +26050,7 @@
     "component.menu.item.meta.color.destructive": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.feedback.error.content-default",
+      "references": "semantic.feedback.error.content.strong",
       "sentido": "Cor anatômica de metadado ou shortcut do item de Menu por state.",
       "escopo": [
         "Menu"
@@ -25826,7 +26113,7 @@
     "component.menu.item.icon.color.destructive": {
       "layer": "component",
       "type": "color",
-      "references": "semantic.icon.color.error",
+      "references": "semantic.icon.color.error-strong",
       "sentido": "Cor anatômica do ícone do item de Menu por state.",
       "escopo": [
         "Menu"
@@ -25973,7 +26260,7 @@
     "component.menu.focus-ring.radius.default": {
       "layer": "component",
       "type": "dimension",
-      "references": "semantic.radius.lg",
+      "references": "semantic.radius.md",
       "sentido": "Radius anatômico do focus ring do Menu.",
       "escopo": [
         "Menu"
@@ -26005,7 +26292,12 @@
       "contexto": "Use na superfície principal do Menu e composições Action Menu para refletir o Effect Style Figma elevation/2.",
       "decisao": "Alias para semantic.shadow.overlay porque a elevação é contrato visual do Menu; shadow permanece CSS-only conforme ADR-016, mas deve espelhar o Effect Style aprovado no Figma.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26024,8 +26316,19 @@
       "contexto": "Use em overlays contextuais que flutuam sobre conteúdo sem a hierarquia forte de Modal.",
       "decisao": "Aliasado a foundation.shadow.md para corresponder ao Effect Style Figma elevation/2, usado pelo Menu.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.menu.surface.shadow.default"
+        ],
         "figma": []
       }
     },
@@ -26033,12 +26336,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.space.2xs",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Gap horizontal entre itens do Pagination.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.space.2xs para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26047,12 +26357,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.lg",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Altura do item Pagination no tamanho sm.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.size.lg para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26061,12 +26378,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.xl",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Altura do item Pagination no tamanho md.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.size.xl para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26075,12 +26399,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.2xl",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Altura do item Pagination no tamanho lg.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.size.2xl para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26089,12 +26420,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.lg",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Largura mínima do item Pagination no tamanho sm.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.size.lg para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26103,12 +26441,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.xl",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Largura mínima do item Pagination no tamanho md.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.size.xl para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26117,12 +26462,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.2xl",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Largura mínima do item Pagination no tamanho lg.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.size.2xl para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26131,12 +26483,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.radius.md",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Radius anatômico do item Pagination.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.radius.md para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26145,12 +26504,19 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.background.transparent",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Background do item Pagination no estado default.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.background.transparent para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26159,12 +26525,19 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.outline.background.hover",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Background do item Pagination no estado hover.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.outline.background.hover para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26173,12 +26546,19 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.brand.background.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Background do item Pagination no estado current.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.brand.background.default para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26187,12 +26567,19 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.background.transparent",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Background do item Pagination no estado disabled.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.background.transparent para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26201,12 +26588,19 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.content.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Cor do conteúdo do item Pagination no estado default.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.content.default para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26215,12 +26609,19 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.content.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Cor do conteúdo do item Pagination no estado hover.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.content.default para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26229,12 +26630,19 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.brand.content-default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Cor do conteúdo do item Pagination no estado current.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.brand.content-default para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26243,12 +26651,19 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.content.disabled",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Cor do conteúdo do item Pagination no estado disabled.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.content.disabled para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26257,12 +26672,19 @@
       "layer": "component",
       "type": "string",
       "references": "semantic.typography.body.font-family.sans",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Font family do texto do item Pagination.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.typography.body.font-family.sans para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26271,12 +26693,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.typography.body.font-size.sm",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Font size do texto do item Pagination no tamanho sm.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.typography.body.font-size.sm para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26285,12 +26714,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.typography.body.font-size.md",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Font size do texto do item Pagination no tamanho md.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.typography.body.font-size.md para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26299,12 +26735,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.typography.body.font-size.lg",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Font size do texto do item Pagination no tamanho lg.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.typography.body.font-size.lg para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26313,12 +26756,19 @@
       "layer": "component",
       "type": "number",
       "references": "semantic.typography.body.font-weight.regular",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Font weight padrão do texto do item Pagination.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.typography.body.font-weight.regular para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26327,12 +26777,19 @@
       "layer": "component",
       "type": "number",
       "references": "semantic.typography.body.font-weight.bold",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Font weight do texto do item Pagination atual.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.typography.body.font-weight.bold para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26341,12 +26798,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.typography.body.line-height.sm",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Line-height do texto do item Pagination no tamanho sm.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.typography.body.line-height.sm para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26355,12 +26819,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.typography.body.line-height.md",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Line-height do texto do item Pagination no tamanho md.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.typography.body.line-height.md para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26369,12 +26840,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.typography.body.line-height.xl",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Line-height do texto do item Pagination no tamanho lg.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.typography.body.line-height.xl para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26383,12 +26861,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.radius.md",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Radius do focus ring do Pagination.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.radius.md para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26397,12 +26882,19 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.icon.color.default",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Cor dos ícones de navegação do Pagination.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.icon.color.default para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26411,12 +26903,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.xs",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Tamanho dos ícones de navegação do Pagination.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.size.xs para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26425,12 +26924,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.icon.stroke-width.regular.16",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Stroke width dos ícones de navegação do Pagination.",
+      "escopo": [
+        "Pagination"
+      ],
+      "contexto": "Usado pelo componente Pagination para compor itens numerados, navegação anterior/próxima e estados interativos.",
+      "decisao": "Alias para semantic.icon.stroke-width.regular.16 para expor a anatomia pública de Pagination na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/pagination.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26438,14 +26944,25 @@
     "semantic.background.transparent": {
       "layer": "semantic",
       "type": "color",
-      "references": null,
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "references": "foundation.color.transparent",
+      "sentido": "Background semântico transparente.",
+      "escopo": [
+        "background",
+        "fill"
+      ],
+      "contexto": "Usado por componentes que precisam declarar ausência visual de fill preservando papel semântico de background.",
+      "decisao": "Alias para foundation.color.transparent para manter transparência acessível pela camada Semantic antes de chegar a Component/CSS.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 2
+          }
+        ],
+        "tokens": [
+          "component.pagination.item.bg.default",
+          "component.pagination.item.bg.disabled"
+        ],
         "figma": []
       }
     },
@@ -26453,13 +26970,29 @@
       "layer": "foundation",
       "type": "color",
       "references": null,
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Cor transparente primitiva.",
+      "escopo": [
+        "color",
+        "background",
+        "fill"
+      ],
+      "contexto": "Usada quando uma superfície precisa manter estrutura de fill/stroke sem cor visível.",
+      "decisao": "Token Foundation criado para representar transparência como valor publicável e reutilizável, em vez de hardcode rgba transparente nos consumidores.",
       "usos": {
-        "css": [],
-        "tokens": [],
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.background.transparent",
+          "semantic.background.transparent"
+        ],
         "figma": []
       }
     },
@@ -26467,12 +27000,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.radius.lg",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Radius do focus ring do Combobox.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.radius.lg para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26481,12 +27021,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.2xl",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Altura do control Combobox no tamanho lg.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.size.2xl para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26495,12 +27042,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.xl",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Altura do control Combobox no tamanho md.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.size.xl para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26509,12 +27063,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.size.lg",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Altura do control Combobox no tamanho sm.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.size.lg para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26523,12 +27084,19 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.surface.elevated",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Background do container listbox do Combobox.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.surface.elevated para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26537,12 +27105,19 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.border.subtle",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Border color do container listbox do Combobox.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.border.subtle para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26551,12 +27126,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.space.2xs",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Gap vertical entre opções no listbox do Combobox.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.space.2xs para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26565,12 +27147,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.space.sm",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Padding interno do container listbox do Combobox.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.space.sm para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26579,12 +27168,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.radius.lg",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Radius do container listbox do Combobox.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.radius.lg para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26593,12 +27189,19 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.outline.background.hover",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Background da opção selecionada do Combobox.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.outline.background.hover para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26607,12 +27210,19 @@
       "layer": "component",
       "type": "color",
       "references": "semantic.content.strong",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Cor do conteúdo da opção selecionada do Combobox.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.content.strong para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26621,12 +27231,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.space.sm",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Gap interno entre ícone, label e adornos da opção do Combobox.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.space.sm para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26635,12 +27252,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.radius.sm",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Radius anatômico da opção do Combobox.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.radius.sm para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26649,12 +27273,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.space.md",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Padding horizontal do control Combobox no tamanho lg.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.space.md para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 2
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26663,12 +27294,19 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.space.sm",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Padding horizontal do control Combobox no tamanho md.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.space.sm para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
-        "css": [],
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 3
+          }
+        ],
         "tokens": [],
         "figma": []
       }
@@ -26677,13 +27315,970 @@
       "layer": "component",
       "type": "dimension",
       "references": "semantic.space.xs",
-      "sentido": "TODO",
-      "escopo": [],
-      "contexto": "TODO",
-      "decisao": "TODO",
+      "sentido": "Padding horizontal do control Combobox no tamanho sm.",
+      "escopo": [
+        "Combobox"
+      ],
+      "contexto": "Usado pelo Combobox para alinhar field, popup listbox e opções à anatomia aprovada em Figma.",
+      "decisao": "Alias para semantic.space.xs para expor a anatomia pública de Combobox na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 2
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.item.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.lg",
+      "sentido": "Radius do item Accordion.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.radius.lg para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
       "usos": {
         "css": [],
         "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.item.border-width.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.border.width.default",
+      "sentido": "Border width do item Accordion.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.border.width.default para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.item.bg.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Background do item Accordion no estado default.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.surface.default para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.item.bg.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.surface.default",
+      "sentido": "Background do item Accordion no estado hover.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.surface.default para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS. O hover do Accordion usa reforço em border brand; o fill permanece controlado por surface.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.item.bg.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.background.disabled",
+      "sentido": "Background do item Accordion no estado disabled.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.background.disabled para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.item.border-color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.default",
+      "sentido": "Border color do item Accordion no estado default.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.border.default para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.item.border-color.hover": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.brand.border.hover",
+      "sentido": "Border color do item Accordion no estado hover.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.brand.border.hover para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.item.border-color.focus": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.border.focus",
+      "sentido": "Border color do item Accordion no estado focus.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.border.focus para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.trigger.content.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.strong",
+      "sentido": "Cor do conteúdo do trigger Accordion no estado default.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.content.strong para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.trigger.content.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Cor do conteúdo do trigger Accordion no estado disabled.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.content.default para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.trigger.height.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.2xl",
+      "sentido": "Altura do trigger Accordion no tamanho md.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.size.2xl para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.trigger.padding-x.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding horizontal do trigger Accordion no tamanho md.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.space.xl para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.trigger.padding-y.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.lg",
+      "sentido": "Padding vertical do trigger Accordion no tamanho md.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.space.lg para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.trigger.gap.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Gap interno do trigger Accordion no tamanho md.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.space.md para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.content.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Cor do texto de content Accordion no estado default.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.content.default para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.content.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.content.default",
+      "sentido": "Cor do texto de content Accordion no estado disabled.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.content.default para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.content.padding-x.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding horizontal do content Accordion no tamanho md.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.space.xl para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.content.padding-bottom.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xl",
+      "sentido": "Padding bottom do content Accordion no tamanho md.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.space.xl para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.content.gap.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Gap interno do content Accordion no tamanho md.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.space.md para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.chevron.size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho do chevron do Accordion.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.size.sm para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.chevron.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.icon.color.default",
+      "sentido": "Cor do chevron Accordion no estado default.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.icon.color.default para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.chevron.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.icon.color.disabled",
+      "sentido": "Cor do chevron Accordion no estado disabled.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.icon.color.disabled para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.chevron.stroke-width.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.icon.stroke-width.regular.20",
+      "sentido": "Stroke width do chevron do Accordion.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.icon.stroke-width.regular.20 para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.leading-icon.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.icon.color.default",
+      "sentido": "Cor do leading icon Accordion no estado default.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.icon.color.default para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.leading-icon.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.icon.color.disabled",
+      "sentido": "Cor do leading icon Accordion no estado disabled.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.icon.color.disabled para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.leading-icon.size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho do leading icon do Accordion.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.size.sm para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.leading-icon.stroke-width.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.icon.stroke-width.regular.20",
+      "sentido": "Stroke width do leading icon do Accordion.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.icon.stroke-width.regular.20 para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.accordion.focus-ring.radius.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.radius.xl",
+      "sentido": "Radius do focus ring do Accordion.",
+      "escopo": [
+        "Accordion"
+      ],
+      "contexto": "Usado pelo Accordion para manter item, trigger, content, chevron, leading icon e focus ring alinhados ao componente Figma.",
+      "decisao": "Alias para semantic.radius.xl para expor a anatomia pública de Accordion na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.divider.inset.padding-x.hairline": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.hairline",
+      "sentido": "Padding horizontal do inset Divider no tamanho hairline.",
+      "escopo": [
+        "Divider"
+      ],
+      "contexto": "Usado pelo Divider para controlar variações de inset sem hardcode de spacing no CSS.",
+      "decisao": "Alias para semantic.space.hairline para expor a anatomia pública de Divider na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.divider.inset.padding-x.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding horizontal do inset Divider no tamanho sm.",
+      "escopo": [
+        "Divider"
+      ],
+      "contexto": "Usado pelo Divider para controlar variações de inset sem hardcode de spacing no CSS.",
+      "decisao": "Alias para semantic.space.sm para expor a anatomia pública de Divider na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.divider.inset.padding-x.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding horizontal do inset Divider no tamanho md.",
+      "escopo": [
+        "Divider"
+      ],
+      "contexto": "Usado pelo Divider para controlar variações de inset sem hardcode de spacing no CSS.",
+      "decisao": "Alias para semantic.space.md para expor a anatomia pública de Divider na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.divider.inset.padding-x.xs": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Padding horizontal do inset Divider no tamanho xs.",
+      "escopo": [
+        "Divider"
+      ],
+      "contexto": "Usado pelo Divider para controlar variações de inset sem hardcode de spacing no CSS.",
+      "decisao": "Alias para semantic.space.xs para expor a anatomia pública de Divider na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.divider.inset.padding-x.2xs": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.2xs",
+      "sentido": "Padding horizontal do inset Divider no tamanho 2xs.",
+      "escopo": [
+        "Divider"
+      ],
+      "contexto": "Usado pelo Divider para controlar variações de inset sem hardcode de spacing no CSS.",
+      "decisao": "Alias para semantic.space.2xs para expor a anatomia pública de Divider na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.divider.inset.padding-y.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Padding vertical do inset Divider no tamanho sm.",
+      "escopo": [
+        "Divider"
+      ],
+      "contexto": "Usado pelo Divider para controlar variações de inset sem hardcode de spacing no CSS.",
+      "decisao": "Alias para semantic.space.sm para expor a anatomia pública de Divider na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.divider.inset.padding-y.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.md",
+      "sentido": "Padding vertical do inset Divider no tamanho md.",
+      "escopo": [
+        "Divider"
+      ],
+      "contexto": "Usado pelo Divider para controlar variações de inset sem hardcode de spacing no CSS.",
+      "decisao": "Alias para semantic.space.md para expor a anatomia pública de Divider na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.divider.inset.padding-y.xs": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Padding vertical do inset Divider no tamanho xs.",
+      "escopo": [
+        "Divider"
+      ],
+      "contexto": "Usado pelo Divider para controlar variações de inset sem hardcode de spacing no CSS.",
+      "decisao": "Alias para semantic.space.xs para expor a anatomia pública de Divider na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.divider.inset.padding-y.2xs": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.2xs",
+      "sentido": "Padding vertical do inset Divider no tamanho 2xs.",
+      "escopo": [
+        "Divider"
+      ],
+      "contexto": "Usado pelo Divider para controlar variações de inset sem hardcode de spacing no CSS.",
+      "decisao": "Alias para semantic.space.2xs para expor a anatomia pública de Divider na camada Component sem consumo direto de Foundation no CSS.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.gap.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Gap interno compartilhado de Field no tamanho sm.",
+      "escopo": [
+        "Field",
+        "Form controls"
+      ],
+      "contexto": "Usado como contrato anatômico compartilhado por controles de formulário que reutilizam a estrutura Field.",
+      "decisao": "Alias para semantic.space.xs para expor a anatomia pública de Field na camada Component sem consumo direto de Foundation no CSS. Centraliza tamanho, espaçamento e iconografia para evitar divergência entre Input, Select, Combobox e controles relacionados.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.gap.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.xs",
+      "sentido": "Gap interno compartilhado de Field no tamanho md.",
+      "escopo": [
+        "Field",
+        "Form controls"
+      ],
+      "contexto": "Usado como contrato anatômico compartilhado por controles de formulário que reutilizam a estrutura Field.",
+      "decisao": "Alias para semantic.space.xs para expor a anatomia pública de Field na camada Component sem consumo direto de Foundation no CSS. Centraliza tamanho, espaçamento e iconografia para evitar divergência entre Input, Select, Combobox e controles relacionados.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.gap.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.sm",
+      "sentido": "Gap interno compartilhado de Field no tamanho lg.",
+      "escopo": [
+        "Field",
+        "Form controls"
+      ],
+      "contexto": "Usado como contrato anatômico compartilhado por controles de formulário que reutilizam a estrutura Field.",
+      "decisao": "Alias para semantic.space.sm para expor a anatomia pública de Field na camada Component sem consumo direto de Foundation no CSS. Centraliza tamanho, espaçamento e iconografia para evitar divergência entre Input, Select, Combobox e controles relacionados.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.icon.color.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.icon.color.default",
+      "sentido": "Cor do ícone compartilhado de Field no estado default.",
+      "escopo": [
+        "Field",
+        "Form controls"
+      ],
+      "contexto": "Usado como contrato anatômico compartilhado por controles de formulário que reutilizam a estrutura Field.",
+      "decisao": "Alias para semantic.icon.color.default para expor a anatomia pública de Field na camada Component sem consumo direto de Foundation no CSS. Centraliza tamanho, espaçamento e iconografia para evitar divergência entre Input, Select, Combobox e controles relacionados.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.icon.color.disabled": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.icon.color.disabled",
+      "sentido": "Cor do ícone compartilhado de Field no estado disabled.",
+      "escopo": [
+        "Field",
+        "Form controls"
+      ],
+      "contexto": "Usado como contrato anatômico compartilhado por controles de formulário que reutilizam a estrutura Field.",
+      "decisao": "Alias para semantic.icon.color.disabled para expor a anatomia pública de Field na camada Component sem consumo direto de Foundation no CSS. Centraliza tamanho, espaçamento e iconografia para evitar divergência entre Input, Select, Combobox e controles relacionados.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.icon.size.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.xs",
+      "sentido": "Tamanho do ícone compartilhado de Field no tamanho sm.",
+      "escopo": [
+        "Field",
+        "Form controls"
+      ],
+      "contexto": "Usado como contrato anatômico compartilhado por controles de formulário que reutilizam a estrutura Field.",
+      "decisao": "Alias para semantic.size.xs para expor a anatomia pública de Field na camada Component sem consumo direto de Foundation no CSS. Centraliza tamanho, espaçamento e iconografia para evitar divergência entre Input, Select, Combobox e controles relacionados.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.icon.size.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.sm",
+      "sentido": "Tamanho do ícone compartilhado de Field no tamanho md.",
+      "escopo": [
+        "Field",
+        "Form controls"
+      ],
+      "contexto": "Usado como contrato anatômico compartilhado por controles de formulário que reutilizam a estrutura Field.",
+      "decisao": "Alias para semantic.size.sm para expor a anatomia pública de Field na camada Component sem consumo direto de Foundation no CSS. Centraliza tamanho, espaçamento e iconografia para evitar divergência entre Input, Select, Combobox e controles relacionados.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.icon.size.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.size.md",
+      "sentido": "Tamanho do ícone compartilhado de Field no tamanho lg.",
+      "escopo": [
+        "Field",
+        "Form controls"
+      ],
+      "contexto": "Usado como contrato anatômico compartilhado por controles de formulário que reutilizam a estrutura Field.",
+      "decisao": "Alias para semantic.size.md para expor a anatomia pública de Field na camada Component sem consumo direto de Foundation no CSS. Centraliza tamanho, espaçamento e iconografia para evitar divergência entre Input, Select, Combobox e controles relacionados.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.icon.stroke-width.sm": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.icon.stroke-width.regular.16",
+      "sentido": "Stroke width do ícone compartilhado de Field no tamanho sm.",
+      "escopo": [
+        "Field",
+        "Form controls"
+      ],
+      "contexto": "Usado como contrato anatômico compartilhado por controles de formulário que reutilizam a estrutura Field.",
+      "decisao": "Alias para semantic.icon.stroke-width.regular.16 para expor a anatomia pública de Field na camada Component sem consumo direto de Foundation no CSS. Centraliza tamanho, espaçamento e iconografia para evitar divergência entre Input, Select, Combobox e controles relacionados.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.icon.stroke-width.md": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.icon.stroke-width.regular.20",
+      "sentido": "Stroke width do ícone compartilhado de Field no tamanho md.",
+      "escopo": [
+        "Field",
+        "Form controls"
+      ],
+      "contexto": "Usado como contrato anatômico compartilhado por controles de formulário que reutilizam a estrutura Field.",
+      "decisao": "Alias para semantic.icon.stroke-width.regular.20 para expor a anatomia pública de Field na camada Component sem consumo direto de Foundation no CSS. Centraliza tamanho, espaçamento e iconografia para evitar divergência entre Input, Select, Combobox e controles relacionados.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.icon.stroke-width.lg": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.icon.stroke-width.regular.24",
+      "sentido": "Stroke width do ícone compartilhado de Field no tamanho lg.",
+      "escopo": [
+        "Field",
+        "Form controls"
+      ],
+      "contexto": "Usado como contrato anatômico compartilhado por controles de formulário que reutilizam a estrutura Field.",
+      "decisao": "Alias para semantic.icon.stroke-width.regular.24 para expor a anatomia pública de Field na camada Component sem consumo direto de Foundation no CSS. Centraliza tamanho, espaçamento e iconografia para evitar divergência entre Input, Select, Combobox e controles relacionados.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.icon-frame.padding-x.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.2xs",
+      "sentido": "Padding horizontal do frame de ícone compartilhado de Field.",
+      "escopo": [
+        "Field",
+        "Form controls"
+      ],
+      "contexto": "Usado como contrato anatômico compartilhado por controles de formulário que reutilizam a estrutura Field.",
+      "decisao": "Alias para semantic.space.2xs para expor a anatomia pública de Field na camada Component sem consumo direto de Foundation no CSS. Centraliza tamanho, espaçamento e iconografia para evitar divergência entre Input, Select, Combobox e controles relacionados.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.field.text-frame.padding-x.default": {
+      "layer": "component",
+      "type": "dimension",
+      "references": "semantic.space.2xs",
+      "sentido": "Padding horizontal do frame de texto compartilhado de Field.",
+      "escopo": [
+        "Field",
+        "Form controls"
+      ],
+      "contexto": "Usado como contrato anatômico compartilhado por controles de formulário que reutilizam a estrutura Field.",
+      "decisao": "Alias para semantic.space.2xs para expor a anatomia pública de Field na camada Component sem consumo direto de Foundation no CSS. Centraliza tamanho, espaçamento e iconografia para evitar divergência entre Input, Select, Combobox e controles relacionados.",
+      "usos": {
+        "css": [],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "component.menu.item.bg.hover.default": {
+      "layer": "component",
+      "type": "color",
+      "references": "semantic.ghost.background.hover",
+      "sentido": "Background hover default do item Menu.",
+      "escopo": [
+        "Menu"
+      ],
+      "contexto": "Usado por Menu e por composições que reutilizam a anatomia de item de menu para estado hover/active.",
+      "decisao": "Alias para semantic.ghost.background.hover para expor a anatomia pública de Menu na camada Component sem consumo direto de Foundation no CSS. Mantém o nome anatômico atual do Figma (`hover/default`) e evita o token legado `hover` sem variant.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/components/combobox.css",
+            "count": 1
+          },
+          {
+            "file": "css/components/menu.css",
+            "count": 1
+          }
+        ],
+        "tokens": [],
+        "figma": []
+      }
+    },
+    "foundation.dimension.1": {
+      "layer": "foundation",
+      "type": "dimension",
+      "references": null,
+      "sentido": "Dimensão fixa de 1px para hairline.",
+      "escopo": [
+        "dimension",
+        "border",
+        "divider",
+        "gap"
+      ],
+      "contexto": "Usada via Semantic para bordas finas, divisores e ajustes mínimos que precisam de 1px real.",
+      "decisao": "Token Foundation criado para separar hairline de zero absoluto; `dimension.0` permanece reservado para ausência de espaço/dimensão.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "semantic.space.hairline"
+        ],
+        "figma": []
+      }
+    },
+    "semantic.feedback.error.content.strong": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "foundation.color.red.700",
+      "sentido": "Cor de conteúdo de erro com ênfase forte.",
+      "escopo": [
+        "color",
+        "content",
+        "feedback"
+      ],
+      "contexto": "Usada quando texto ou item destructive precisa de contraste/ênfase superior ao erro padrão.",
+      "decisao": "Alias para foundation.color.red.700 para diferenciar erro forte de `feedback.error.content-default` sem expor Foundation a componentes.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 2
+          },
+          {
+            "file": "css/tokens/generated/theme-dark.css",
+            "count": 1
+          },
+          {
+            "file": "css/tokens/generated/theme-light.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.menu.item.content.color.destructive",
+          "component.menu.item.meta.color.destructive",
+          "semantic.icon.color.error-strong",
+          "semantic.icon.color.error-strong"
+        ],
+        "figma": []
+      }
+    },
+    "semantic.icon.color.error-strong": {
+      "layer": "semantic",
+      "type": "color",
+      "references": "semantic.feedback.error.content.strong",
+      "sentido": "Cor de ícone de erro com ênfase forte.",
+      "escopo": [
+        "color",
+        "icon",
+        "feedback"
+      ],
+      "contexto": "Usada por ícones destructive/error que precisam acompanhar conteúdo de erro forte.",
+      "decisao": "Alias para semantic.feedback.error.content.strong para manter iconografia alinhada ao vocabulário Semantic de feedback forte antes da camada Component.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.menu.item.icon.color.destructive"
+        ],
+        "figma": []
+      }
+    },
+    "semantic.space.hairline": {
+      "layer": "semantic",
+      "type": "dimension",
+      "references": "foundation.dimension.1",
+      "sentido": "Espaço semântico hairline.",
+      "escopo": [
+        "space",
+        "divider",
+        "inset"
+      ],
+      "contexto": "Usado para ajustes finos de inset/gap, especialmente em Divider e bordas visuais muito finas.",
+      "decisao": "Alias para foundation.dimension.1 para dar intenção semântica ao 1px sem reutilizar `space.none` ou hardcode no componente.",
+      "usos": {
+        "css": [
+          {
+            "file": "css/tokens/generated/component.css",
+            "count": 1
+          }
+        ],
+        "tokens": [
+          "component.divider.inset.padding-x.hairline"
+        ],
         "figma": []
       }
     }

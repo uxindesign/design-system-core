@@ -10,11 +10,21 @@ O Orchestrator:
 2. escolhe a proxima role;
 3. envia para a role apenas o path da run e artefatos de entrada;
 4. para em gates que exigem aprovacao do owner;
-5. nunca transforma aprovacao de um gate em autorizacao para todos os proximos.
+5. nunca transforma aprovacao de um gate em autorizacao para todos os proximos;
+6. separa falhas globais de falhas do componente atual e reporta ambas antes de prosseguir.
 
 O Orchestrator nao deve substituir DS Architect, Figma Builder, Figma Auditor, Token Sync Agent, Repo Component Agent ou Release Agent.
 
 Para Product Designers, o Orchestrator tambem deve esconder os comandos tecnicos. O designer nao precisa rodar `npm`, criar pastas ou copiar prompts entre chats; o Orchestrator executa isso e apresenta apenas gates claros de aprovacao.
+
+Quando uma role encontrar problema que o processo deveria ter evitado, o Orchestrator deve abrir um gate de retroalimentacao antes do proximo handoff. Esse gate exige:
+
+- causa raiz classificada como componente, auditoria automatizada, checklist/role ou drift global;
+- correcao no artefato afetado;
+- atualizacao de script, teste, checklist ou processo quando a causa for sistemica;
+- evidencia antes/depois ou status `bloqueado` quando faltar snapshot atualizado.
+
+Problemas globais encontrados durante uma run nao podem ficar escondidos no fechamento do componente. Eles devem virar uma fila paralela com impacto, comandos executados e decisao necessaria do owner.
 
 ## Fluxo
 

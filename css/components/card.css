@@ -101,7 +101,7 @@
 
 /* Outlined — stronger border */
 .ds-card--outlined {
-  border: var(--ds-card-border-width-default) solid var(--ds-card-border-color-elevated);
+  border: var(--ds-card-border-width-default) solid var(--ds-card-border-color-outlined);
 }
 
 /* Elevated — raised surface + semantic card shadow, no stroke in Figma. */

@@ -612,7 +612,7 @@
           "toned": {
             "light": {
               "$type": "color",
-              "$value": "rgba(125, 158, 232, 0.3)",
+              "$value": "rgba(178, 194, 230, 0.2)",
               "$description": "Disabled fill for Button Brand Toned in light mode."
             },
             "dark": {

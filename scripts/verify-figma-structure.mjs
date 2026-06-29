@@ -26,6 +26,7 @@ if (args.includes("--help") || args.includes("-h")) {
   process.exit(0);
 }
 const strictUnused = args.includes("--strict-unused");
+const MIN_STRUCTURE_EXPORTER_VERSION = "0.2.0";
 
 const snapshotArgIndex = args.indexOf("--snapshot");
 const DEFAULT_STRUCTURE_SNAPSHOT_PATH = path.join(ROOT, ".figma-snapshot.structure.json");
@@ -65,6 +66,7 @@ const registry = loadRegistry();
 
 const structureAudit = snapshot.structureAudit || null;
 const variableAuditComplete = Boolean(structureAudit?.variableAuditComplete);
+const generatorVersion = snapshot.generator?.version || null;
 
 if (variables.length === 0 && !variableAuditComplete) {
   issues.push(issue("snapshot", "missing-variables", "snapshot", "Snapshot não contém variables."));
@@ -80,6 +82,15 @@ if (!snapshot.structureAudit) {
     "missing-structure-audit",
     "snapshot",
     "Snapshot não contém structureAudit. Gere novo snapshot com figma-plugin/snapshot-exporter atualizado."
+  ));
+}
+
+if (structureAudit?.variableUsage && !isVersionAtLeast(generatorVersion, MIN_STRUCTURE_EXPORTER_VERSION)) {
+  issues.push(issue(
+    "snapshot",
+    "outdated-snapshot-exporter",
+    "snapshot",
+    `Snapshot gerado com exporter ${generatorVersion || "desconhecido"}; mínimo para variableUsage é ${MIN_STRUCTURE_EXPORTER_VERSION}. Gere novo snapshot com figma-plugin/snapshot-exporter atualizado.`
   ));
 }
 
@@ -153,6 +164,7 @@ console.log("═══ verify-figma-structure ═══════════�
 console.log("");
 console.log(`snapshot:        ${path.relative(ROOT, snapshotPath)}`);
 console.log(`generatedAt:     ${snapshot.generatedAt || "?"}`);
+console.log(`exporter:        ${generatorVersion || "?"}`);
 console.log(`variables:       ${variables.length}`);
 console.log(`component pages: ${structureAudit?.componentPageCount ?? "?"}`);
 if (variableUsage) {
@@ -197,6 +209,27 @@ function selectNewestSnapshot(candidates) {
       mtimeMs: fs.statSync(candidate).mtimeMs,
     }))
     .sort((a, b) => b.mtimeMs - a.mtimeMs)[0]?.path || null;
+}
+
+function isVersionAtLeast(actual, minimum) {
+  if (!actual) return false;
+  const actualParts = parseVersion(actual);
+  const minimumParts = parseVersion(minimum);
+  for (let index = 0; index < 3; index += 1) {
+    if (actualParts[index] > minimumParts[index]) return true;
+    if (actualParts[index] < minimumParts[index]) return false;
+  }
+  return true;
+}
+
+function parseVersion(value) {
+  return String(value)
+    .split(".")
+    .slice(0, 3)
+    .map((part) => Number.parseInt(part, 10))
+    .map((part) => Number.isFinite(part) ? part : 0)
+    .concat([0, 0, 0])
+    .slice(0, 3);
 }
 
 console.log("✓ Estrutura Figma válida para as invariantes automatizadas.");

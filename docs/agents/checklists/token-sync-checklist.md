@@ -8,6 +8,7 @@ Use somente depois de Figma aprovado.
 - [ ] Figma aprovado pelo owner.
 - [ ] Auditoria Figma sem falhas bloqueantes.
 - [ ] Snapshot Figma atualizado quando houve mudanca em variables.
+- [ ] Snapshot foi gerado com exporter atualizado quando a auditoria depender de `structureAudit.variableUsage`.
 - [ ] Categoria do token confirmada: Figma-canonica ou CSS-only.
 
 ## Sync
@@ -25,6 +26,7 @@ Use somente depois de Figma aprovado.
 - [ ] `npm run verify:tokens`.
 - [ ] `npm run verify:figma-structure` quando snapshot estrutural estiver atualizado.
 - [ ] `npm run audit:component-tokens` quando criar/remover/renomear Component variables.
+- [ ] Se o snapshot estiver desatualizado em relacao ao Figma vivo, nao declarar gate verde; registrar `bloqueado por snapshot desatualizado`.
 - [ ] Revisar diff de JSON e CSS gerado.
 
 ## Saida

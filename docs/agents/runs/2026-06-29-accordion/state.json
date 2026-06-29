@@ -1,0 +1,155 @@
+{
+  "schema": "ds-core/agent-run-state",
+  "version": 1,
+  "runId": "2026-06-29-accordion",
+  "title": "Accordion",
+  "createdAt": "2026-06-29",
+  "updatedAt": "2026-06-29",
+  "figmaSnapshot": {
+    "id": null,
+    "generatedAt": null,
+    "path": null
+  },
+  "currentGate": "brief",
+  "gates": [
+    {
+      "id": "brief",
+      "role": "DS Architect",
+      "artifacts": [
+        "01-brief.md",
+        "02-figma-spec.md"
+      ],
+      "requires": [],
+      "needsOwnerApproval": true,
+      "status": "pending",
+      "ownerApproval": null,
+      "updatedAt": null
+    },
+    {
+      "id": "figma-build",
+      "role": "Figma Builder",
+      "artifacts": [
+        "03-figma-build-report.md"
+      ],
+      "requires": [
+        "brief"
+      ],
+      "needsOwnerApproval": false,
+      "status": "pending",
+      "ownerApproval": null,
+      "updatedAt": null
+    },
+    {
+      "id": "figma-audit",
+      "role": "Figma Auditor",
+      "artifacts": [
+        "04-figma-audit-report.md"
+      ],
+      "requires": [
+        "figma-build"
+      ],
+      "needsOwnerApproval": true,
+      "status": "pending",
+      "ownerApproval": null,
+      "updatedAt": null
+    },
+    {
+      "id": "token-sync",
+      "role": "Token Sync Agent",
+      "artifacts": [
+        "05-repo-sync-plan.md"
+      ],
+      "requires": [
+        "figma-audit"
+      ],
+      "needsOwnerApproval": false,
+      "status": "pending",
+      "ownerApproval": null,
+      "updatedAt": null
+    },
+    {
+      "id": "repo",
+      "role": "Repo Component Agent",
+      "artifacts": [
+        "06-repo-implementation-report.md"
+      ],
+      "requires": [
+        "token-sync"
+      ],
+      "needsOwnerApproval": true,
+      "status": "pending",
+      "ownerApproval": null,
+      "updatedAt": null
+    },
+    {
+      "id": "release",
+      "role": "Release Agent",
+      "artifacts": [
+        "07-release-report.md"
+      ],
+      "requires": [
+        "repo"
+      ],
+      "needsOwnerApproval": true,
+      "status": "pending",
+      "ownerApproval": null,
+      "updatedAt": null
+    }
+  ],
+  "checks": {
+    "verify:agent-docs": {
+      "exit": 0,
+      "passed": true,
+      "note": "Docs de agentes validam apos retroalimentacao",
+      "recordedAt": "2026-06-29T01:57:08.284Z"
+    },
+    "verify:figma-structure": {
+      "exit": 0,
+      "passed": true,
+      "note": "Snapshot 0.2.0 atualizado; structure issues 0",
+      "recordedAt": "2026-06-29T09:49:29.142Z"
+    },
+    "figma:plugin:check": {
+      "exit": 0,
+      "passed": true,
+      "note": "Exporter 0.2.0 passa em node --check",
+      "recordedAt": "2026-06-29T01:57:14.897Z"
+    },
+    "verify:tokens": {
+      "exit": 0,
+      "passed": true,
+      "note": "JSON ↔ Figma OK; VALUE_DRIFT=0 DRIFT_FROM_SOURCE=0 NEEDS_SYNC=0",
+      "recordedAt": "2026-06-29T09:49:41.688Z"
+    },
+    "live:modal-overlay-padding": {
+      "exit": 0,
+      "passed": true,
+      "note": "Figma vivo: modal/overlay/padding/default bindado nos quatro paddings do component set Modal 154:33",
+      "recordedAt": "2026-06-29T02:30:00.825Z"
+    },
+    "audit:component-tokens": {
+      "exit": 0,
+      "passed": true,
+      "note": "Snapshot 0.2.0 atualizado; Component variables 709/709 usadas",
+      "recordedAt": "2026-06-29T09:49:34.356Z"
+    },
+    "npm:test": {
+      "exit": 0,
+      "passed": true,
+      "note": "npm test passou completo apos preencher registry",
+      "recordedAt": "2026-06-29T10:03:07.341Z"
+    },
+    "build:tokens": {
+      "exit": 0,
+      "passed": true,
+      "note": "build:tokens passou apos materializar NEW_IN_FIGMA e ajustes de Card/Menu",
+      "recordedAt": "2026-06-29T02:40:09.747Z"
+    },
+    "verify:registry": {
+      "exit": 0,
+      "passed": true,
+      "note": "1227/1227 entries com metadados completos",
+      "recordedAt": "2026-06-29T10:03:07.335Z"
+    }
+  }
+}

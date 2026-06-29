@@ -14,6 +14,7 @@
   --ds-toned-background-default: var(--ds-overlay-blue-600-12);
   --ds-toned-background-hover: var(--ds-overlay-blue-600-20);
   --ds-toned-background-active: var(--ds-overlay-blue-600-28);
+  --ds-toned-background-disabled: var(--ds-color-disabled-brand-toned-dark);
   --ds-outline-content-default: var(--ds-color-neutral-300);
   --ds-outline-content-disabled: var(--ds-color-neutral-600);
   --ds-outline-border-default: var(--ds-color-neutral-500);
@@ -54,6 +55,7 @@
   --ds-feedback-error-background-active: var(--ds-color-red-400);
   --ds-feedback-error-background-subtle: var(--ds-color-red-900);
   --ds-feedback-error-background-disabled: var(--ds-color-disabled-error-dark);
+  --ds-feedback-error-content-strong: var(--ds-color-red-200); /** Conteudo error/destructive ativo com contraste reforcado para surfaces elevadas. */
   --ds-feedback-info-border-default: var(--ds-color-blue-400);
   --ds-feedback-info-content-default: var(--ds-color-blue-300);
   --ds-feedback-info-content-contrast: var(--ds-color-brand-950);
@@ -75,7 +77,7 @@
   --ds-content-default: var(--ds-color-neutral-300); /** Conteúdo padrão (body text, descriptions, form labels). Use este na maioria dos casos. */
   --ds-content-hover: var(--ds-color-neutral-300); /** Conteúdo neutro em hover. */
   --ds-content-subtle: var(--ds-color-neutral-400); /** Conteúdo de ênfase reduzida (placeholders, ícones decorativos, helper text). */
-  --ds-content-disabled: var(--ds-color-neutral-500); /** Conteúdo em estado disabled. Isento de contraste WCAG. Unifica text/disabled e state/disabled/foreground (ADR-011). */
+  --ds-content-disabled: var(--ds-color-neutral-600); /** Conteúdo em estado disabled. Isento de contraste WCAG. Unifica text/disabled e state/disabled/foreground (ADR-011). */
   --ds-content-inverse: var(--ds-color-neutral-900);
   --ds-content-placeholder-rectangle-height-default: var(--ds-dimension-120); /** Altura padrão do placeholder retangular de conteúdo. */
   --ds-content-placeholder-text-height-default: var(--ds-dimension-12); /** Altura padrão do placeholder textual de conteúdo. */
@@ -153,6 +155,7 @@
   --ds-space-section-2xl: var(--ds-dimension-120); /** 120px. Maior respiro de section previsto para páginas e documentação. */
   --ds-space-control-padding-6: var(--ds-dimension-6); /** 6px. Padding simétrico de Icon Only sm Button. Único valor de control entre xs(4) e sm(8) que foge da escala space. */
   --ds-space-control-padding-10: var(--ds-dimension-10); /** 10px. Padding-Y vertical de controles (Input/Button md). Único valor de control que foge da escala space (xs–2xl). */
+  --ds-space-hairline: var(--ds-dimension-1); /** 1px. Menor espaço semântico para bordas hairline, divisores e ajustes finos. */
   --ds-size-xs: var(--ds-dimension-16); /** 16px. Inline icon em body text, indicator pequeno. */
   --ds-size-sm: var(--ds-dimension-20); /** 20px. Icon padrão em controle, checkbox/radio sm. */
   --ds-size-md: var(--ds-dimension-24); /** 24px. Icon grande, checkbox/radio md, avatar icon. */
@@ -219,7 +222,6 @@
   --ds-brand-border-hover: var(--ds-brand-background-hover);
   --ds-brand-border-disabled: var(--ds-brand-background-disabled);
   --ds-toned-content-disabled: var(--ds-content-disabled);
-  --ds-toned-background-disabled: var(--ds-background-disabled);
   --ds-content-brand: var(--ds-brand-background-default); /** Conteúdo brand sobre superfície neutra. */
   --ds-icon-color-default: var(--ds-content-default);
   --ds-icon-color-hover: var(--ds-content-hover);
@@ -234,6 +236,7 @@
   --ds-icon-color-warning-contrast: var(--ds-feedback-warning-content-contrast);
   --ds-icon-color-error-contrast: var(--ds-feedback-error-content-contrast);
   --ds-icon-color-info-contrast: var(--ds-feedback-info-content-contrast);
+  --ds-icon-color-error-strong: var(--ds-feedback-error-content-strong); /** Icone error/destructive ativo pareado com feedback/error/content/strong. */
   --ds-border-error-hover: var(--ds-feedback-error-border-hover);
   --ds-border-overlay-default: var(--ds-overlay-default);
   --ds-border-overlay-medium: var(--ds-overlay-medium);

@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-06-29T07:46:21-03:00",
+  "source": "Figma MCP write result",
+  "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
+  "decision": "semantic.space.hairline deve ser 1px em todos os modos",
+  "variable": {
+    "id": "VariableID:8300:2504",
+    "name": "space/hairline",
+    "description": "1px. Menor espaco semantico para bordas hairline, divisores e ajustes finos.",
+    "codeSyntax": {
+      "WEB": "--ds-space-hairline"
+    },
+    "scopes": [
+      "WIDTH_HEIGHT",
+      "GAP"
+    ],
+    "valuesByMode": {
+      "11:0": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8552:2",
+        "name": "dimension/1"
+      },
+      "11:1": {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:8552:2",
+        "name": "dimension/1"
+      }
+    }
+  }
+}

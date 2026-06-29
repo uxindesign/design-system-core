@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-06-28T23:36:50-03:00",
+  "source": "Figma MCP write result",
+  "fileKey": "PRYS2kL7VdC1MtVWfZvuDN",
+  "result": {
+    "dimensionZero": {
+      "id": "VariableID:7645:2",
+      "name": "dimension/0",
+      "value": 0,
+      "web": "--ds-dimension-0"
+    },
+    "dimensionOne": {
+      "id": "VariableID:8552:2",
+      "name": "dimension/1",
+      "value": 1,
+      "web": "--ds-dimension-1"
+    },
+    "spaceNone": {
+      "id": "VariableID:7645:3",
+      "name": "space/none"
+    },
+    "spaceHairline": {
+      "id": "VariableID:8300:2504",
+      "name": "space/hairline"
+    },
+    "menuBgDefault": {
+      "id": "VariableID:8552:3",
+      "name": "menu/item/bg/default"
+    },
+    "menuBgFocused": {
+      "id": "VariableID:8552:4",
+      "name": "menu/item/bg/focused"
+    },
+    "menuBgDisabled": {
+      "id": "VariableID:8552:5",
+      "name": "menu/item/bg/disabled"
+    },
+    "menuBgHoverDefault": {
+      "id": "VariableID:7970:19",
+      "name": "menu/item/bg/hover/default",
+      "web": "--ds-menu-item-bg-hover-default"
+    },
+    "bindCounts": {
+      "default": 6,
+      "focused": 6,
+      "disabled": 6
+    }
+  }
+}

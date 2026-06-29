@@ -42,6 +42,7 @@ Use este checklist antes e durante qualquer escrita no Figma.
 - [ ] Nenhuma decisao de token, slot, layer, property publica ou rename foi tomada por busca aproximada de nome.
 - [ ] Nenhuma tabela ou texto documental foi atualizado por improviso; toda alteração documental vem da matriz.
 - [ ] Propriedade, slot, token ou state removido/renomeado também foi removido/renomeado na documentação da página.
+- [ ] Qualquer falha sistêmica encontrada foi separada da correção do componente e registrada como gate paralelo.
 
 ## Tokens e bindings
 
@@ -77,6 +78,7 @@ Use este checklist antes e durante qualquer escrita no Figma.
 - [ ] Bindings ausentes em documentação visual quando as páginas modelo usam binding equivalente: `0`.
 - [ ] Textos documentais com altura fixa: `0`.
 - [ ] Nos soltos fora do root da pagina: `0`.
+- [ ] Falhas de gate/exporter/checklist encontradas durante a validação foram corrigidas no processo ou deixaram o status como `bloqueado`.
 
 ## Gate de handoff
 
@@ -85,6 +87,7 @@ Use este checklist antes e durante qualquer escrita no Figma.
 - [ ] Visual: `passou`.
 - [ ] Se qualquer item acima falhou, status final é `bloqueado`, não `pronto para auditoria`.
 - [ ] Se o owner rejeitou visualmente o draft, nenhuma nova escrita foi feita antes de auditoria read-only e plano de recuperação com node IDs.
+- [ ] Snapshot usado pelos gates reflete a última escrita no Figma; caso contrário, status é `bloqueado por snapshot desatualizado`.
 
 ## Saida
 

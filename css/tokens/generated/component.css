@@ -3,6 +3,29 @@
  */
 
 :root {
+  --ds-accordion-item-radius-default: var(--ds-radius-lg); /** Accordion Component token aliasing Semantic/radius/lg. */
+  --ds-accordion-item-border-width-default: var(--ds-border-width-default); /** Accordion Component token aliasing Semantic/border/width/default. */
+  --ds-accordion-item-bg-default: var(--ds-surface-default); /** Accordion Component token aliasing Semantic/surface/default. */
+  --ds-accordion-item-bg-hover: var(--ds-surface-default); /** Accordion hover keeps surface default; hover affordance is carried by brand border. */
+  --ds-accordion-item-bg-disabled: var(--ds-background-disabled); /** Accordion Component token aliasing Semantic/background/disabled. */
+  --ds-accordion-item-border-color-default: var(--ds-border-default); /** Accordion Component token aliasing Semantic/border/default. */
+  --ds-accordion-item-border-color-focus: var(--ds-border-focus); /** Accordion Component token aliasing Semantic/border/focus. */
+  --ds-accordion-trigger-content-color-default: var(--ds-content-strong); /** Accordion Component token aliasing Semantic/content/strong. */
+  --ds-accordion-trigger-content-color-disabled: var(--ds-content-default); /** Accordion disabled text keeps readable content color; disabled affordance is state/background/icon. */
+  --ds-accordion-trigger-height-md: var(--ds-size-2xl); /** Accordion Component token aliasing Semantic/size/2xl. */
+  --ds-accordion-trigger-padding-x-md: var(--ds-space-xl); /** Accordion Component token aliasing Semantic/space/xl. */
+  --ds-accordion-trigger-padding-y-md: var(--ds-space-lg); /** Accordion Component token aliasing Semantic/space/lg. */
+  --ds-accordion-trigger-gap-md: var(--ds-space-md); /** Accordion Component token aliasing Semantic/space/md. */
+  --ds-accordion-content-color-default: var(--ds-content-default); /** Accordion Component token aliasing Semantic/content/default. */
+  --ds-accordion-content-color-disabled: var(--ds-content-default); /** Accordion disabled content keeps readable content color; disabled affordance is state/background/icon. */
+  --ds-accordion-content-padding-x-md: var(--ds-space-xl); /** Accordion Component token aliasing Semantic/space/xl. */
+  --ds-accordion-content-padding-bottom-md: var(--ds-space-xl); /** Accordion Component token aliasing Semantic/space/xl. */
+  --ds-accordion-content-gap-md: var(--ds-space-md); /** Accordion Component token aliasing Semantic/space/md. */
+  --ds-accordion-chevron-size-md: var(--ds-size-sm); /** Accordion Component token aliasing Semantic/size/sm. */
+  --ds-accordion-chevron-stroke-width-md: var(--ds-icon-stroke-width-regular-20); /** Accordion Component token aliasing Semantic/icon/stroke-width/regular/20. */
+  --ds-accordion-leading-icon-size-md: var(--ds-size-sm); /** Sincronizado a partir da Variable Figma component.accordion.leading-icon.size.md. */
+  --ds-accordion-leading-icon-stroke-width-md: var(--ds-icon-stroke-width-regular-20); /** Sincronizado a partir da Variable Figma component.accordion.leading-icon.stroke-width.md. */
+  --ds-accordion-focus-ring-radius-default: var(--ds-radius-xl); /** Sincronizado a partir da Variable Figma component.accordion.focus-ring.radius.default. */
   --ds-action-menu-overlay-gap-default: var(--ds-space-xs); /** Gap entre o trigger e o overlay do Action Menu. */
   --ds-alert-padding-default: var(--ds-space-md); /** Padding do Alert. */
   --ds-alert-gap-default: var(--ds-space-sm); /** Gap horizontal do Alert. */
@@ -139,6 +162,7 @@
   --ds-button-bg-toned-hover: var(--ds-toned-background-hover); /** Bg do Button toned hover. */
   --ds-button-bg-toned-pressed: var(--ds-toned-background-active); /** Bg do Button toned pressed. */
   --ds-button-bg-toned-focus: var(--ds-toned-background-default); /** Bg do Button toned focus. */
+  --ds-button-bg-toned-disabled: var(--ds-toned-background-disabled); /** Bg do Button toned disabled. */
   --ds-button-bg-outline-hover: var(--ds-outline-background-hover); /** Bg do Button outline hover. */
   --ds-button-bg-outline-pressed: var(--ds-background-subtle); /** Bg do Button outline pressed. */
   --ds-button-bg-ghost-hover: var(--ds-ghost-background-hover); /** Bg do Button ghost hover. */
@@ -184,6 +208,7 @@
   --ds-button-content-color-toned-hover: var(--ds-link-content-hover); /** Cor de conteúdo do Button toned hover. */
   --ds-button-content-color-toned-pressed: var(--ds-link-content-hover); /** Cor de conteúdo do Button toned pressed. */
   --ds-button-content-color-toned-focus: var(--ds-toned-content-default); /** Cor de conteúdo do Button toned focus. */
+  --ds-button-content-color-toned-disabled: var(--ds-toned-content-disabled); /** Cor de conteúdo do Button toned disabled. */
   --ds-button-content-color-outline-default: var(--ds-outline-content-default); /** Cor de conteúdo do Button outline default. */
   --ds-button-content-color-outline-hover: var(--ds-outline-content-default); /** Cor de conteúdo do Button outline hover. */
   --ds-button-content-color-outline-pressed: var(--ds-outline-content-default); /** Cor de conteúdo do Button outline pressed. */
@@ -213,12 +238,7 @@
   --ds-card-border-width-default: var(--ds-border-width-default); /** Border width do Card quando stroke está ativo. */
   --ds-card-container-padding-default: var(--ds-space-xl); /** Padding interno do container de conteúdo do Card. */
   --ds-card-container-gap-default: var(--ds-space-md); /** Gap vertical entre header, body e footer no container de conteúdo do Card. */
-  --ds-card-header-padding-x-default: var(--ds-space-lg); /** Padding horizontal do header Card. */
-  --ds-card-header-padding-top-default: var(--ds-space-lg); /** Padding top do header Card. */
-  --ds-card-header-padding-bottom-default: var(--ds-space-sm); /** Padding bottom do header Card. */
   --ds-card-header-gap-default: var(--ds-space-sm); /** Gap vertical do header Card. */
-  --ds-card-body-padding-x-default: var(--ds-space-lg); /** Padding horizontal do body Card. */
-  --ds-card-body-padding-bottom-default: var(--ds-space-lg); /** Padding bottom do body Card. */
   --ds-card-body-font-size-default: var(--ds-body-font-size-sm); /** Font-size do body Card. */
   --ds-card-body-line-height-default: var(--ds-body-line-height-sm); /** Line-height do body Card. */
   --ds-card-body-font-weight-default: var(--ds-body-font-weight-regular); /** Font-weight do body Card. */
@@ -234,8 +254,7 @@
   --ds-card-subtitle-color-default: var(--ds-content-default);
   --ds-card-bg-default: var(--ds-surface-default);
   --ds-card-bg-elevated: var(--ds-surface-raised);
-  --ds-card-border-color-outlined: var(--ds-border-subtle);
-  --ds-card-border-color-elevated: var(--ds-border-default);
+  --ds-card-border-color-outlined: var(--ds-border-default);
   --ds-checkbox-target-height-sm: var(--ds-size-lg); /** Altura minima da area interativa Checkbox sm. */
   --ds-checkbox-target-height-md: var(--ds-size-xl); /** Altura minima da area interativa Checkbox md. */
   --ds-checkbox-target-height-lg: var(--ds-size-2xl); /** Altura minima da area interativa Checkbox lg. */
@@ -289,9 +308,17 @@
   --ds-combobox-padding-x-lg: var(--ds-space-md);
   --ds-combobox-padding-x-md: var(--ds-space-sm);
   --ds-combobox-padding-x-sm: var(--ds-space-xs);
-  --ds-divider-line-color-default: var(--ds-border-subtle); /** Cor da linha do Divider. */
   --ds-divider-line-thickness-default: var(--ds-border-width-default); /** Espessura da linha do Divider. */
   --ds-divider-line-radius-default: var(--ds-radius-md); /** Raio da linha do Divider. */
+  --ds-divider-inset-padding-x-hairline: var(--ds-space-hairline); /** Sincronizado a partir da Variable Figma component.divider.inset.padding-x.hairline. */
+  --ds-divider-inset-padding-x-sm: var(--ds-space-sm); /** Sincronizado a partir da Variable Figma component.divider.inset.padding-x.sm. */
+  --ds-divider-inset-padding-x-md: var(--ds-space-md); /** Sincronizado a partir da Variable Figma component.divider.inset.padding-x.md. */
+  --ds-divider-inset-padding-x-xs: var(--ds-space-xs); /** Sincronizado a partir da Variable Figma component.divider.inset.padding-x.xs. */
+  --ds-divider-inset-padding-x-2xs: var(--ds-space-2xs); /** Sincronizado a partir da Variable Figma component.divider.inset.padding-x.2xs. */
+  --ds-divider-inset-padding-y-sm: var(--ds-space-sm); /** Sincronizado a partir da Variable Figma component.divider.inset.padding-y.sm. */
+  --ds-divider-inset-padding-y-md: var(--ds-space-md); /** Sincronizado a partir da Variable Figma component.divider.inset.padding-y.md. */
+  --ds-divider-inset-padding-y-xs: var(--ds-space-xs); /** Sincronizado a partir da Variable Figma component.divider.inset.padding-y.xs. */
+  --ds-divider-inset-padding-y-2xs: var(--ds-space-2xs); /** Sincronizado a partir da Variable Figma component.divider.inset.padding-y.2xs. */
   --ds-field-bg-default: var(--ds-surface-default); /** Field background default. */
   --ds-field-bg-disabled: var(--ds-background-disabled); /** Field background disabled. */
   --ds-field-bg-readonly: var(--ds-surface-default); /** Field background read-only. */
@@ -312,6 +339,17 @@
   --ds-field-value-color-default: var(--ds-content-strong); /** Field value color default. */
   --ds-field-value-color-disabled: var(--ds-content-disabled); /** Field value color disabled. */
   --ds-field-value-color-readonly: var(--ds-content-default); /** Field value color read-only. */
+  --ds-field-gap-sm: var(--ds-space-xs); /** Sincronizado a partir da Variable Figma component.field.gap.sm. */
+  --ds-field-gap-md: var(--ds-space-xs); /** Sincronizado a partir da Variable Figma component.field.gap.md. */
+  --ds-field-gap-lg: var(--ds-space-sm); /** Sincronizado a partir da Variable Figma component.field.gap.lg. */
+  --ds-field-icon-size-sm: var(--ds-size-xs); /** Sincronizado a partir da Variable Figma component.field.icon.size.sm. */
+  --ds-field-icon-size-md: var(--ds-size-sm); /** Sincronizado a partir da Variable Figma component.field.icon.size.md. */
+  --ds-field-icon-size-lg: var(--ds-size-md); /** Sincronizado a partir da Variable Figma component.field.icon.size.lg. */
+  --ds-field-icon-stroke-width-sm: var(--ds-icon-stroke-width-regular-16); /** Sincronizado a partir da Variable Figma component.field.icon.stroke-width.sm. */
+  --ds-field-icon-stroke-width-md: var(--ds-icon-stroke-width-regular-20); /** Sincronizado a partir da Variable Figma component.field.icon.stroke-width.md. */
+  --ds-field-icon-stroke-width-lg: var(--ds-icon-stroke-width-regular-24); /** Sincronizado a partir da Variable Figma component.field.icon.stroke-width.lg. */
+  --ds-field-icon-frame-padding-x-default: var(--ds-space-2xs); /** Sincronizado a partir da Variable Figma component.field.icon-frame.padding-x.default. */
+  --ds-field-text-frame-padding-x-default: var(--ds-space-2xs); /** Sincronizado a partir da Variable Figma component.field.text-frame.padding-x.default. */
   --ds-focus-ring-color-default: var(--ds-border-focus); /** Focus ring color default. */
   --ds-focus-ring-color-error: var(--ds-border-focus-error); /** Focus ring color error. */
   --ds-focus-ring-color-readonly: var(--ds-border-control-default); /** Focus ring color read-only. */
@@ -379,7 +417,7 @@
   --ds-menu-item-height-sm: var(--ds-size-lg); /** Altura mínima do item Menu sm. */
   --ds-menu-item-height-md: var(--ds-size-xl); /** Altura mínima do item Menu md. */
   --ds-menu-item-height-lg: var(--ds-size-2xl); /** Altura mínima do item Menu lg. */
-  --ds-menu-item-radius-default: var(--ds-radius-md); /** Radius do item Menu. */
+  --ds-menu-item-radius-default: var(--ds-radius-sm); /** Radius do item Menu. */
   --ds-menu-item-gap-sm: var(--ds-space-xs); /** Gap interno do item Menu sm. */
   --ds-menu-item-gap-md: var(--ds-space-xs); /** Gap interno do item Menu md. */
   --ds-menu-item-gap-lg: var(--ds-space-sm); /** Gap interno do item Menu lg. */
@@ -387,24 +425,24 @@
   --ds-menu-item-padding-x-md: var(--ds-space-sm); /** Padding horizontal do item Menu md. */
   --ds-menu-item-padding-x-lg: var(--ds-space-md); /** Padding horizontal do item Menu lg. */
   --ds-menu-item-bg-default: var(--ds-surface-raised); /** Background default do item Menu. */
-  --ds-menu-item-bg-hover: var(--ds-outline-background-hover); /** Background hover do item Menu. */
+  --ds-menu-item-bg-hover-default: var(--ds-ghost-background-hover); /** Sincronizado a partir da Variable Figma component.menu.item.bg.hover.default. */
   --ds-menu-item-bg-focused: var(--ds-surface-raised); /** Background focused do item Menu. */
   --ds-menu-item-bg-disabled: var(--ds-surface-raised); /** Background disabled do item Menu. */
   --ds-menu-item-content-color-default: var(--ds-content-default); /** Cor do conteúdo do item Menu. */
   --ds-menu-item-content-color-hover: var(--ds-content-strong); /** Cor do conteúdo do item Menu em hover. */
   --ds-menu-item-content-color-focused: var(--ds-content-strong); /** Cor do conteúdo do item Menu em focus. */
   --ds-menu-item-content-color-disabled: var(--ds-content-disabled); /** Cor do conteúdo do item Menu disabled. */
-  --ds-menu-item-content-color-destructive: var(--ds-feedback-error-content-default); /** Cor do conteúdo destructive do item Menu. */
+  --ds-menu-item-content-color-destructive: var(--ds-feedback-error-content-strong); /** Cor do conteúdo destructive do item Menu. */
   --ds-menu-item-meta-color-default: var(--ds-content-subtle); /** Cor de shortcut ou metadado do item Menu. */
   --ds-menu-item-meta-color-disabled: var(--ds-content-disabled); /** Cor de shortcut ou metadado do item Menu disabled. */
-  --ds-menu-item-meta-color-destructive: var(--ds-feedback-error-content-default); /** Cor de shortcut ou metadado destructive do item Menu. */
+  --ds-menu-item-meta-color-destructive: var(--ds-feedback-error-content-strong); /** Cor de shortcut ou metadado destructive do item Menu. */
   --ds-menu-item-icon-size-sm: var(--ds-size-xs); /** Tamanho do ícone do item Menu sm. */
   --ds-menu-item-icon-size-md: var(--ds-size-sm); /** Tamanho do ícone do item Menu md. */
   --ds-menu-item-icon-size-lg: var(--ds-size-md); /** Tamanho do ícone do item Menu lg. */
   --ds-menu-item-icon-stroke-width-sm: var(--ds-icon-stroke-width-regular-16); /** Stroke width do ícone do item Menu sm. */
   --ds-menu-item-icon-stroke-width-md: var(--ds-icon-stroke-width-regular-20); /** Stroke width do ícone do item Menu md. */
   --ds-menu-item-icon-stroke-width-lg: var(--ds-icon-stroke-width-regular-24); /** Stroke width do ícone do item Menu lg. */
-  --ds-menu-focus-ring-radius-default: var(--ds-radius-lg); /** Radius do focus ring do item Menu. */
+  --ds-menu-focus-ring-radius-default: var(--ds-radius-md); /** Radius do focus ring do item Menu. */
   --ds-modal-overlay-bg-default: var(--ds-background-overlay); /** Background do overlay Modal. */
   --ds-modal-overlay-padding-default: var(--ds-space-xl); /** Padding do overlay Modal. */
   --ds-modal-overlay-z-index-default: var(--ds-z-modal); /** Z-index do overlay Modal. */
@@ -626,9 +664,9 @@
   --ds-toggle-thumb-fill-on-hover: var(--ds-brand-content-hover); /** Fill do thumb Toggle on hover. */
   --ds-toggle-thumb-fill-on-disabled: var(--ds-brand-content-disabled); /** Fill do thumb Toggle on disabled. */
   --ds-toggle-focus-ring-radius-default: var(--ds-radius-full); /** Radius do focus ring Toggle. */
-  --ds-tooltip-content-padding-x-default: var(--ds-space-sm); /** Padding horizontal do content Tooltip. */
-  --ds-tooltip-content-padding-y-default: var(--ds-space-xs); /** Padding vertical do content Tooltip. */
-  --ds-tooltip-content-radius-default: var(--ds-radius-sm); /** Radius do content Tooltip. */
+  --ds-tooltip-content-padding-x-default: var(--ds-space-md); /** Padding horizontal do content Tooltip. */
+  --ds-tooltip-content-padding-y-default: var(--ds-space-sm); /** Padding vertical do content Tooltip. */
+  --ds-tooltip-content-radius-default: var(--ds-radius-md); /** Radius do content Tooltip. */
   --ds-tooltip-content-fill-default: var(--ds-background-inverse);
   --ds-tooltip-label-font-size-default: var(--ds-body-font-size-sm); /** Font-size do label Tooltip. */
   --ds-tooltip-label-line-height-default: var(--ds-body-line-height-sm); /** Line-height do label Tooltip. */
@@ -637,6 +675,11 @@
   --ds-tooltip-arrow-base-default: var(--ds-space-sm); /** Base visual da seta Tooltip. */
   --ds-tooltip-arrow-depth-default: var(--ds-space-xs); /** Profundidade visual da seta Tooltip. */
   --ds-tooltip-arrow-fill-default: var(--ds-background-inverse);
+  --ds-accordion-item-border-color-hover: var(--ds-brand-border-hover); /** Accordion hover border uses brand hover stroke to match interactive DS item affordance. */
+  --ds-accordion-chevron-color-default: var(--ds-icon-color-default); /** Accordion Component token aliasing Semantic/icon/color/default. */
+  --ds-accordion-chevron-color-disabled: var(--ds-icon-color-disabled); /** Accordion Component token aliasing Semantic/icon/color/disabled. */
+  --ds-accordion-leading-icon-color-default: var(--ds-icon-color-default); /** Sincronizado a partir da Variable Figma component.accordion.leading-icon.color.default. */
+  --ds-accordion-leading-icon-color-disabled: var(--ds-icon-color-disabled); /** Sincronizado a partir da Variable Figma component.accordion.leading-icon.color.disabled. */
   --ds-alert-icon-color-success-filled: var(--ds-icon-color-success-contrast); /** Cor do ícone do Alert. Alias para feedback/success/content/contrast. */
   --ds-alert-icon-color-success-subtle: var(--ds-icon-color-success); /** Cor do ícone do Alert. Alias para feedback/success/content/default. */
   --ds-alert-icon-color-warning-filled: var(--ds-icon-color-warning-contrast); /** Cor do ícone do Alert. Alias para feedback/warning/content/contrast. */
@@ -650,17 +693,18 @@
   --ds-alert-close-icon-color-error-filled: var(--ds-icon-color-error-contrast);
   --ds-alert-close-icon-color-info-filled: var(--ds-icon-color-info-contrast);
   --ds-alert-close-icon-color-subtle: var(--ds-icon-color-default);
-  --ds-button-bg-toned-disabled: var(--ds-toned-background-disabled); /** Bg do Button toned disabled. */
-  --ds-button-content-color-toned-disabled: var(--ds-toned-content-disabled); /** Cor de conteúdo do Button toned disabled. */
   --ds-card-interactive-border-color-selected: var(--ds-brand-border-default); /** Border color do Card Interactive no estado selected. */
   --ds-checkbox-box-border-color-unchecked-error-hover: var(--ds-border-error-hover);
+  --ds-divider-line-color-default: var(--ds-border-overlay-default); /** Cor da linha do Divider. */
   --ds-field-border-color-error-hover: var(--ds-border-error-hover); /** Field border error hover. */
+  --ds-field-icon-color-default: var(--ds-icon-color-default); /** Sincronizado a partir da Variable Figma component.field.icon.color.default. */
+  --ds-field-icon-color-disabled: var(--ds-icon-color-disabled); /** Sincronizado a partir da Variable Figma component.field.icon.color.disabled. */
   --ds-form-field-error-icon-color-default: var(--ds-icon-color-error); /** Cor do ícone da mensagem de erro Form Field. */
   --ds-input-icon-color-default: var(--ds-icon-color-default); /** Cor do ícone Input Text. */
   --ds-input-icon-color-disabled: var(--ds-icon-color-disabled); /** Cor do ícone Input Text disabled. */
   --ds-menu-item-icon-color-default: var(--ds-icon-color-default); /** Cor do ícone do item Menu. */
   --ds-menu-item-icon-color-disabled: var(--ds-icon-color-disabled); /** Cor do ícone do item Menu disabled. */
-  --ds-menu-item-icon-color-destructive: var(--ds-icon-color-error); /** Cor do ícone destructive do item Menu. */
+  --ds-menu-item-icon-color-destructive: var(--ds-icon-color-error-strong); /** Cor do ícone destructive do item Menu. */
   --ds-modal-close-color-default: var(--ds-icon-color-default); /** Cor do ícone de fechar da Modal. */
   --ds-pagination-icon-color-default: var(--ds-icon-color-default);
   --ds-radio-control-border-color-unselected-error-hover: var(--ds-border-error-hover);

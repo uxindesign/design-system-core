@@ -73,7 +73,7 @@
         },
         "disabled": {
           "$type": "color",
-          "$value": "{semantic.background.disabled}"
+          "$value": "{foundation.color.disabled.brand.toned.dark}"
         }
       }
     },
@@ -272,6 +272,13 @@
             "$type": "color",
             "$value": "{foundation.color.disabled.error.dark}"
           }
+        },
+        "content": {
+          "strong": {
+            "$type": "color",
+            "$value": "{foundation.color.red.200}",
+            "$description": "Conteudo error/destructive ativo com contraste reforcado para surfaces elevadas."
+          }
         }
       },
       "info": {
@@ -383,7 +390,7 @@
       },
       "disabled": {
         "$type": "color",
-        "$value": "{foundation.color.neutral.500}",
+        "$value": "{foundation.color.neutral.600}",
         "$description": "Conteúdo em estado disabled. Isento de contraste WCAG. Unifica text/disabled e state/disabled/foreground (ADR-011)."
       },
       "inverse": {
@@ -572,6 +579,11 @@
         "info-contrast": {
           "$type": "color",
           "$value": "{semantic.feedback.info.content-contrast}"
+        },
+        "error-strong": {
+          "$type": "color",
+          "$value": "{semantic.feedback.error.content.strong}",
+          "$description": "Icone error/destructive ativo pareado com feedback/error/content/strong."
         }
       },
       "stroke-width": {
@@ -872,6 +884,11 @@
             "$description": "10px. Padding-Y vertical de controles (Input/Button md). Único valor de control que foge da escala space (xs–2xl)."
           }
         }
+      },
+      "hairline": {
+        "$type": "dimension",
+        "$value": "{foundation.dimension.1}",
+        "$description": "1px. Menor espaço semântico para bordas hairline, divisores e ajustes finos."
       }
     },
     "size": {

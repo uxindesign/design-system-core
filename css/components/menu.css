@@ -97,7 +97,7 @@
 
 .ds-menu__item:hover:not([disabled]):not([aria-disabled="true"]),
 .ds-menu__item[data-active="true"] {
-  background: var(--ds-menu-item-bg-hover);
+  background: var(--ds-menu-item-bg-hover-default);
   color: var(--ds-menu-item-content-color-hover);
 }
 
