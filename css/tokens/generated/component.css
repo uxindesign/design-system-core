@@ -273,6 +273,22 @@
   --ds-checkbox-mark-fill-indeterminate-hover: var(--ds-brand-content-hover); /** Fill da marca Checkbox indeterminate hover. */
   --ds-checkbox-mark-fill-indeterminate-disabled: var(--ds-brand-content-disabled); /** Fill da marca Checkbox indeterminate disabled. */
   --ds-checkbox-focus-ring-radius-default: var(--ds-radius-md); /** Radius do focus ring Checkbox. */
+  --ds-combobox-focus-ring-radius-default: var(--ds-radius-lg);
+  --ds-combobox-height-lg: var(--ds-size-2xl);
+  --ds-combobox-height-md: var(--ds-size-xl);
+  --ds-combobox-height-sm: var(--ds-size-lg);
+  --ds-combobox-listbox-container-bg-default: var(--ds-surface-elevated);
+  --ds-combobox-listbox-container-border-color-default: var(--ds-border-subtle);
+  --ds-combobox-listbox-container-gap-default: var(--ds-space-2xs);
+  --ds-combobox-listbox-container-padding-default: var(--ds-space-sm);
+  --ds-combobox-listbox-container-radius-default: var(--ds-radius-lg);
+  --ds-combobox-option-bg-selected: var(--ds-outline-background-hover);
+  --ds-combobox-option-content-color-selected: var(--ds-content-strong);
+  --ds-combobox-option-gap-default: var(--ds-space-sm);
+  --ds-combobox-option-radius-default: var(--ds-radius-sm);
+  --ds-combobox-padding-x-lg: var(--ds-space-md);
+  --ds-combobox-padding-x-md: var(--ds-space-sm);
+  --ds-combobox-padding-x-sm: var(--ds-space-xs);
   --ds-divider-line-color-default: var(--ds-border-subtle); /** Cor da linha do Divider. */
   --ds-divider-line-thickness-default: var(--ds-border-width-default); /** Espessura da linha do Divider. */
   --ds-divider-line-radius-default: var(--ds-radius-md); /** Raio da linha do Divider. */

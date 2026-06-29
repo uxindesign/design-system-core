@@ -12,6 +12,7 @@
 | Input Text | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Textarea | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Select | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
+| Combobox | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Checkbox | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Radio | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
 | Toggle | 🟢 | 🟢 | 🟢 | ⬜ | 🟢 |
@@ -72,7 +73,6 @@
 | ADR-017 | — Componentes CSS-only (sem equivalência no Figma) | Aceito |
 | ADR-018 | — Renomear `content.{default,secondary,tertiary}` para `content.{strong,default,subtle}` | Aceito |
 | ADR-019 | — Reintrodução de Component tokens como contrato anatômico | Aceita |
-| ADR-020 | — Anatomias globais de form controls | Aceita |
 
 ## Próximos milestones
 

@@ -199,6 +199,7 @@ const knownComponents = [
   { name: 'Input Text',  css: 'input'      },
   { name: 'Textarea',    css: 'textarea'   },
   { name: 'Select',      css: 'select'     },
+  { name: 'Combobox',    css: 'combobox'   },
   { name: 'Checkbox',    css: 'checkbox'   },
   { name: 'Radio',       css: 'radio'      },
   { name: 'Toggle',      css: 'toggle'     },
